@@ -1,0 +1,63 @@
+/* CSS MODIFICATIONS TO WP ADMIN */
+
+/* Hide Admin elements */
+.adminHide{display:none!important;}
+
+/* Hide Admin elements from all users */
+#formatdiv, #postimagediv, #menu-comments{display:none;}
+
+/* clean up the category screen - add column */
+body.taxonomy-category #col-left  { 
+	width: 100%;
+	clear: both;
+	border-top:1px solid #e5e5e5;
+	padding-top: 20px;
+}
+
+body.taxonomy-category .form-field input[type=text],
+body.taxonomy-category #col-left textarea,
+body.taxonomy-category { 
+	width: 100% !important;
+	padding-right: 0 !important;
+}
+
+/* clean up the category screen - list column */
+body.taxonomy-category #col-right  { 
+	width: 100%;
+	clear: both;
+	padding-bottom: 30px;
+}
+
+/* category screen table - hide the columsn */
+body.taxonomy-category #col-right .column-description,
+body.taxonomy-category #col-right .column-wpseo_score { 
+	display: none;
+}
+
+body.taxonomy-category #col-right .column-name,
+body.taxonomy-category #col-right .column-slug { 
+	width: 50%;
+}
+
+body.taxonomy-category .form-table > tbody > .acf-field > .acf-label { 
+	/* display: none; */
+}
+body.taxonomy-category .acf-field-flexible-content > .acf-input {
+	padding:0 10px 0 0;
+}
+
+body.taxonomy-category .wpseo-taxonomy-metabox-postbox { 
+	margin-right: 10px;
+}
+body.taxonomy-category .acf-actions { 
+	padding-bottom: 20px;
+}
+
+body.taxonomy-category #wpcontent { 
+}
+
+/* hide legacy description */
+body.taxonomy-category #wp-description-wrap,
+body.taxonomy-category .term-description-wrap { 
+	display: none;
+}

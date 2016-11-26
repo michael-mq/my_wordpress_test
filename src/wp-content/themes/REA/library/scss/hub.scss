@@ -1,0 +1,828 @@
+$feedSize: 1em; // 16px
+$feedLine: 1.2;
+
+@font-face {
+  	font-family: 'Museo-Sans-900';
+  	src: url('../fonts/MuseoSans_900-webfont.eot');
+  	src: url('../fonts/MuseoSans_900-webfont.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/MuseoSans_900-webfont.woff') format('woff'),
+           url('../fonts/MuseoSans_900-webfont.ttf') format('truetype'),
+           url('../fonts/MuseoSans_900-webfont.svg#font-name') format('svg');
+  	font-weight: normal;
+  	font-style: normal;
+}
+
+// appply these styles to a category archive page, or hub page template
+body.archive.category,
+body.page-template-template-hub-page {
+
+  .column {
+    background: #fff;
+  }
+
+  // Left column feed
+  .feed {
+    article {
+      padding: 0 0 1em;
+      line-height: 1.1;
+      figure {
+        max-width: 95px;
+        float: right;
+        margin: 0 0 0 10px;
+        @media (min-width: $phoneLandscape) {
+          float: left;
+          margin: 0 10px 0 0;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      @media (min-width: $phoneLandscape) {
+        .article-summary-category-link {
+          margin-left: 106px;
+        }
+      }
+    }
+  }
+
+  // Place the sponsored banner over the top of the category label
+  .article-small .article-summary-sponsor {
+    background: #fff;
+    position: relative;
+    top: -12px;
+    float: left;
+    p {
+      margin: 0 3px 0 0;
+    }
+  }
+  // Big story in the middle
+  .hero {
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+    min-height: 200px;
+    figure a img {
+      width: 100%;
+      height: auto;
+      @media (min-width: 600px) {
+        width: auto;
+        height: 250px;
+      }
+      @media (min-width: $tabletPortrait) {
+        height: 300px;
+      }
+      @media (min-width: $tabletLandscape) {
+        height: 320px;
+      }
+    }
+    aside {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-shadow: 0 1px 1px #000;
+      box-sizing: border-box;
+      line-height: 1.2;
+      padding: 2em 15px 1em;
+      background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
+      .article-summary-title-link {
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.5em;
+        line-height: 1.1;
+        font-family: $fontDefault;
+      }
+       p {
+        margin: 0;
+      }
+      .article-summary-category-link {
+        margin: 0;
+        color: #fff;
+        padding: 0 0 7px;
+      }
+    }
+    .article-summary-sponsor {
+      float: right;
+    }
+  }
+  // For video dont do gradient and reverse type color
+  .article-hero-video {
+    figure iframe {
+      vertical-align: bottom;
+    }
+    aside {
+      background: #fff;
+      padding-top: 0;
+      .article-summary-category-link,
+      .article-summary-title-link {
+        text-shadow: none;
+        color: $defaultDark;
+      }
+      .article-summary-category-link {
+        display: block;
+        color: $defaultLight;
+      }
+      @media (min-width: 60px) {
+        padding-top: 1em;
+        position: relative;
+        color: #fff;
+        background: #333f48;
+        .article-summary-category-link,
+        .article-summary-title-link {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .features {
+    background: #fff;
+  }
+  .article-summary-title-link {
+    font-size: $feedSize;
+    display: block;
+    color: $defaultDark;
+    text-decoration: none;
+    line-height: $feedLine;
+    @media(max-width: 600px) {
+      padding-top: 5px;
+    }
+  }
+  .article-summary-sponsor-label,
+  .article-summary-category-link {
+    text-transform: uppercase;
+    display: block;
+    padding-top: 7px;
+    color: #ababab;
+    text-decoration: none;
+    font-size: 10px;
+  }
+  .article-summary-sponsor-label {
+    display: inline-block;
+    padding: 0;
+  }
+
+  .article-summary-sponsor-logo  {
+    display: inline-block;
+    max-height: 24px;
+    max-width: 120px;
+  }
+
+  .subhero {
+    width: 46%;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 1.2;
+    @media (min-width: $phoneLandscape) {
+      aside {
+        min-height: 100px;
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+    figure a img {
+      width: auto;
+      height: 120px;
+      margin-bottom: 10px;
+      @media (min-width: $tabletPortrait) {
+        height: 140px;
+        margin-left: -10px;
+      }
+      @media (min-width: 1025px) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .subhero:nth-of-type(odd) {
+    float: right;
+  }
+
+  .mobile-heading {
+    font-size: 1.25em;
+    margin: 1em 0;
+    text-align: center;
+    display: none;
+  }
+
+  .main-heading {
+    font-size: 0.75em;
+    text-align: center;
+    padding: 20px 0 30px;
+    h1 {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 0.125em;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 1.375em;
+      font-family: $fontDefault;
+      color: $defaultMedium;
+    }
+  }
+
+  .main-heading.mobile {
+    display: block;
+    margin-top: 3em;
+  }
+
+
+  /* Landscape phone */
+  @media (min-width: 600px) {
+    .column {
+      float: left;
+      width: 50%;
+      min-width: 300px;
+    }
+    .hero {
+      margin: 0 0 20px;
+    }
+
+    .main-heading {
+       h1 {
+        font-size: 3em;
+      }
+      &.mobile {
+        display: none;
+      }
+    }
+
+    .feed {
+      width: 300px;
+    }
+
+    .features {
+      float: right;
+      width: 100%;
+      padding-left: 300px;
+      margin-left: -330px;
+      .features .column-wrap {
+        width: 330px;
+      }
+    }
+  }
+
+  /* Landscape ipad and desktop */
+  @media (min-width: 970px) {
+    .features .column-wrap {
+      width: 300px;
+      margin: auto;
+    }
+  }
+
+  // Maybe theres a better way
+  // This is for all top level hubs
+  &.news-hub,
+  &.buying-hub,
+  &.investing-hub,
+  &.renovating-hub,
+  &.dream-homes-hub,
+  &.selling-hub,
+  &.renting-hub,
+  &.building-hub,
+  &.finance-hub, {
+    // Only want this on the home page (news)
+    .rui-grid-primary {
+      padding-right: 300px;
+    }
+    .rui-grid .rui-grid-secondary {
+      display: block;
+      width: 300px;
+    }
+    // From small screen up to when 3rd column gets dropped
+    @media (min-width: 600px) and (max-width: 970px) {
+      #rui-main-content {
+        max-width: 300px;
+        margin: auto;
+        float: left;
+      }
+    }
+    // Desktop
+    @media (min-width: 971px) {
+      .rui-grid .rui-grid-secondary {
+        display: block;
+      }
+    }
+    // Tablet
+    @media (min-width: 640px) and (max-width: 970px) {
+      .rui-grid-primary {
+        padding-right: 0;
+      }
+      .rui-grid .rui-grid-secondary {
+        float: right;
+      }
+    }
+    // Mobile
+    @media (max-width: 639px) {
+      .rui-grid-primary {
+        padding-right: 0;
+      }
+      .rui-grid .rui-grid-secondary {
+        margin: 0 auto;
+      }
+    }
+  }
+
+
+  /* Wider than landscape ipad */
+  @media (min-width: 1060px) {
+    .features .column-wrap {
+      width: 410px;
+    }
+    .hero {
+      margin-bottom: 30px;
+    }
+  }
+
+
+  /* needs to be somewhere else */
+  .mini-nav .menu li a {
+    padding-left: 0;
+    margin-right: 15px;
+  }
+
+	// styles for the focus box section
+	.block-focus-boxes {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+	}
+	// style for the focus box item
+	.focus-box {
+		width: 100%;
+		padding: 5px 10px;
+		text-align: center;
+		a {
+		  text-decoration: none;
+		  display: block;
+		}
+		@media (min-width: 320px) {
+			display: inline-block;
+			float: left;
+			width: 50%;
+			padding-bottom: 30px;
+		}
+    @media (min-width: 320px) and (max-width: $phoneLandscape) {
+      &:nth-of-type(odd) {
+        clear: left;
+      }
+    }
+
+		@media (min-width: $tabletPortrait) {
+			width: 25%;
+		}
+
+		&__title {
+			width: 100%;
+			display: block;
+			text-align: center;
+			font-size: 1em;
+		}
+
+		&__description {
+			text-align: center;
+			margin: 0.5em 0.5em 0;
+			font-size: 0.75em;
+			color: $defaultMedium;
+			@media (min-width: $tabletPortrait) {
+			  font-size: 0.875em;
+			  margin: 0;
+			}
+		}
+
+		&__link {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 0.750em;
+      color: $reaRed;
+      font-family: $fontMedium;
+      padding: 10px 0;
+      display: block;
+      letter-spacing: 1.6px;
+		}
+		&__image {
+			margin: auto;
+			max-height: 50px;
+			@media (min-width: $tabletPortrait) {
+		    max-height: 70px
+		  }
+		}
+	}
+	.block-header {
+	  margin-bottom: 1.5em;
+	}
+
+
+  // Category blocks under main feed
+  .category-block {
+    h2 a {
+      text-decoration: none;
+      color: $defaultDark;
+    }
+    .cat-column {
+      width: 100%;
+      @media (min-width: $phoneLandscape) {
+        width: 300px;
+      }
+      margin: auto;
+      .hero {
+        margin: 0 0 18px 0;
+        figure a img {
+          @media (min-width: $phoneLandscape) {
+            height: 250px;
+          }
+        }
+        .article-summary-title-link {
+          font-size: 1.25em;
+        }
+      }
+      .column-wrap {
+        width: 300px;
+        margin: auto;
+      }
+    }
+    .article-small {
+      .article-summary-category-link {
+        margin-left: 0;
+      }
+    }
+    h3 {
+      text-align: center;
+    }
+    @media (min-width: 600px) {
+      h3 {
+        text-align: left;
+        font-size: 1.75em;
+        margin: 0.5em 0 0.75em;
+      }
+      .cat-column {
+        float: left;
+      }
+      .feed {
+        float: right;
+      }
+      // Hide the 5th article on tablet
+      .column-wrap-3-up .article-small:last-child {
+        display: none;
+      }
+    }
+    @media (min-width: 700px) and (max-width: 970px) {
+      max-width: 680px;
+      margin: auto;
+    }
+    @media (min-width: 970px) {
+      .feed {
+        width: 100%;
+        padding-left: 330px;
+        margin-left: -330px;
+        //float: left;
+      }
+      .column-wrap-3-up {
+        width: 300px;
+        float: right;
+        .article-small:first-child {
+          padding-top: 0;
+        }
+        .article-small:last-child {
+          display: block;
+        }
+      }
+      .column-wrap-2-up {
+        .article-small {
+          width: 175px;
+          margin-left: 25px;
+          float: left;
+          overflow: hidden;
+          padding: 0;
+          border: none;
+          figure {
+            max-width: none;
+            float: none;
+            margin-right: 0;
+            a img {
+              width: auto;
+              height: 140px;
+              margin-bottom: 10px;
+            }
+          }
+          @media (min-width: 980px) and (max-width: 1060px) {
+            width: 140px;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+    .category-link {
+      text-align: center;
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.75em;
+      line-height: 3.5em;
+      font-family: $fontMedium;
+      @media(min-width: $phoneLandscape) {
+        float: right;
+        text-align: inherit;
+      }
+    }
+    // Videos in cat blocks dont need to be any taller
+    .article-hero-video figure iframe {
+      max-height: 170px;
+    }
+  }
+
+  // Category blocks under main feed
+  .sponsored-category-block {
+    padding: 1em 0;
+    @media (min-width: 600px) and (max-width: 970px) {
+      .rui-grid {
+        padding: 0;
+      }
+    }
+    margin: 2em auto;
+    h2 {
+      margin-bottom: 0;
+      a {
+        text-decoration: none;
+        color: $defaultDark;
+      }
+    }
+    h3 {
+      text-align: center;
+    }
+    .sponsored-by {
+      float: right;
+      p {
+        float: right;
+        margin-right: 10px;
+        padding: 0px;
+        margin-bottom: 0px; }
+      img {
+        float: right;
+        height: 33px;
+      }
+    }
+    .sponsored-footer {
+      clear: both;
+      text-align: center;
+      h4 {
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+      }
+      a {
+        border-color: #000;
+        color: #000;
+        margin-bottom: 1.5em;
+      }
+    }
+    @media (min-width: 600px) {
+      .sponsored-by {
+        margin: 20px 0 15px;
+      }
+      h2 {
+        display: inline-block;
+        margin-bottom: 1em;
+      }
+    }
+    .cat-column {
+      width: 100%;
+      margin: auto;
+      @media (min-width: 970px) {
+        &:first-of-type {
+          margin-right: 90px;
+        }
+        &:last-of-type {
+          float: right;
+        }
+      }
+      // Anywhere between phone and tablet portrait
+      @media (min-width: $phoneLandscape) and (max-width: 990px) {
+        width: 31.3333%;
+        margin-left: 3%;
+        &:first-of-type {
+          margin-left: 0;
+        }
+      }
+      @media (min-width: 991px) {
+        max-width: 300px;
+      }
+      .hero {
+        margin: 0 0 18px 0;
+        figure a img {
+          @media (min-width: $phoneLandscape) {
+            height: 250px;
+          }
+        }
+        .article-summary-title-link {
+          font-size: 1.25em;
+        }
+      }
+      .column-wrap {
+        width: 300px;
+        margin: 0px 30px;
+      }
+    }
+    .category-link {
+      text-align: center;
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.75em;
+      line-height: 3.5em;
+      font-family: $fontMedium;
+      @media(min-width: $phoneLandscape) {
+        float: right;
+        text-align: inherit;
+      }
+    }
+    // Videos in cat blocks dont need to be any taller
+    .article-hero-video figure iframe {
+      max-height: 170px;
+    }
+    @media (max-width: 600px) {
+      .cat-column {
+        float: left;
+        margin: 0 auto!important;
+        &:first-of-type { margin-right: 0px; }
+        &:last-of-type { margin-left: 0px; }
+      }
+    }
+    @media (min-width: 970px) {
+
+    }
+    @media (min-width: 600px) {
+      h3 {
+        text-align: left;
+        font-size: 1.75em;
+        margin: 0.5em 0 0.75em;
+      }
+      .cat-column {
+        float: left;
+      }
+      .feed {
+        float: right;
+      }
+      // Hide the 5th article on tablet
+      .column-wrap-3-up .article-small:last-child {
+        display: none;
+      }
+    }
+    @media (min-width: 970px) and (max-width: 1140px) {
+      .sponsored-category-block { padding: 10px 68px; }
+      .cat-column {
+        float: left;
+        &:first-of-type { margin-right: 30px; }
+        &:last-of-type { margin-left: 30px; }
+      }
+    }
+    @media (min-width: 970px) {
+      .feed {
+        width: 100%;
+        padding-left: 330px;
+        margin-left: -330px;
+        //float: left;
+      }
+      .column-wrap-3-up {
+        width: 300px;
+        float: right;
+        .article-small:first-child {
+          padding-top: 0;
+        }
+        .article-small:last-child {
+          display: block;
+        }
+      }
+      .column-wrap-2-up {
+        .article-small {
+          width: 175px;
+          margin-left: 25px;
+          float: left;
+          overflow: hidden;
+          padding: 0;
+          border: none;
+          figure {
+            max-width: none;
+            float: none;
+            margin-right: 0;
+            a img {
+              width: auto;
+              height: 140px;
+              margin-bottom: 10px;
+            }
+          }
+          @media (min-width: 980px) and (max-width: 1060px) {
+            width: 140px;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .featured-articles-block .feed {
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      margin-top: 20px;
+    }
+  }
+
+  // The home page only
+  &.news-hub {
+    .main-heading {
+      display: none;
+      @media (min-width: 600px) {
+        display: block;
+      }
+    }
+    .hero {
+      @media (max-width: 600px) {
+        margin: 0 -15px 15px;
+        max-height: 300px;
+      }
+      figure a img {
+        @media (max-width: 600px) {
+          margin: 0;
+        }
+      }
+      aside .article-summary-title-link {
+        font-size: 2em;
+      }
+    }
+    .article-hero-video  aside .article-summary-title-link {
+      font-size: 1.25em;
+    }
+    .rui-ad-wrapper {
+      margin-bottom: 0;
+    }
+    @media (max-width: 600px) {
+      .featured-articles-block .feed {
+        padding-top: 0;
+        border-top: none;
+        margin-top: 0;
+        .mobile-heading {
+          display: block;
+        }
+      }
+    }
+    @media (min-width: 640px) and (max-width: 970px) {
+      .hero-content {
+        max-width: 710px;
+        margin: auto;
+        .features {
+          float: none;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .rui-grid-secondary .rui-ad-wrapper {
+    margin: 0 0 1em;
+  }
+}
+
+/* Ad placeholders */
+.half-page {
+  margin-bottom: 1em;
+}
+
+.tablet-content,
+.ad-medrec {
+  display: none;
+  @media (min-width: 640px) and (max-width: 970px) {
+    display: inline-block;
+  }
+}
+
+
+.tablet-content {
+  strong {
+    border-bottom: 1px solid #ddd;
+    font-size: 1.25em;
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+  }
+  .quick-links {
+    li {
+      float: left;
+      width: 50%;
+      a {
+        padding: 1em 0;
+        font-size: 0.875em;
+        text-decoration: none;
+        display: inline-block;
+        color: $defaultDark;
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+/* 
+  *  REA Group User Interface Library
+  *  Typography CSS
+  *  Fonts, headings, copy
+  *
+  ---------------------------------------------------------------------------------------------------------------------------------------------------- */
+@import "resi-base.scss";
+
+/* Base font size of 1em based on 16px default font size
+ *
+ * To acheive a certain pixel height use the following:
+ *
+ *  11px => 0.689
+ *  12px => 0.750
+ *  13px => 0.814
+ *  14px => 0.875
+ *  15px => 0.938
+ *  16px => 1.000
+ *  17px => 1.064
+ *  18px => 1.125
+ *  19px => 1.188
+ *  20px => 1.250
+ *  21px => 1.313
+ *  22px => 1.375
+ *  23px => 1.438
+ *  24px => 1.500
+ *  25px => 1.563
+ *  26px => 1.625
+ *  27px => 1.688
+ *  28px => 1.750
+ *  29px => 1.813
+ *  30px => 1.875
+ */
+
+body {
+  font-family: $fontDefault;
+  color: $defaultDark;
+  font-weight: normal;
+}
+
+/* Set treatment for links REA red */
+a,
+a:visited {
+  color: $reaRed;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fontMedium;
+  font-weight: normal;
+  color: $defaultDark;
+}
+
+/* As we move away from Alwyn/Museo Slab we still have the option to brand parts of the site */
+h1.rui-brand-heading,
+h2.rui-brand-heading,
+h3.rui-brand-heading {
+  font-family: $fontMedium;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 1.5em; /* 24px */
+}
+
+h2 {
+  font-size: 1.375em; /* 22px */
+}
+
+h3 {
+  font-size: 1.125em; /* 18px */
+}
+
+h4 {
+  font-size: 1em; /* 16px */
+}
+
+h5 {
+  font-size: 0.875em; /* 14px */
+}
+
+h6 {
+  font-size: 0.814em; /* 13px */
+}
+
+/*
+ *
+ * LISTS
+ * Sure, by default lists (li) have padding and stuff but everyone hates it.
+  ---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+ul, ol {
+  list-style: none;
+}
+
+/* If you want a list with padding and bullets etc, you have to ask for it */
+.rui-list {
+  margin: 0 0 30px 20px;
+}
+
+ul.rui-list {
+  list-style-type: disc;
+}
+
+ol.rui-list {
+  list-style-type: decimal;
+}
+
+.rui-list-inline {
+  margin-bottom: 30px;
+}
+
+.rui-list-inline li {
+  display: inline;
+  margin-right: 20px;
+}
+
+
+

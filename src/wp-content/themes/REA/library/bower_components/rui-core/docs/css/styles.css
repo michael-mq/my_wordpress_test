@@ -1,0 +1,207 @@
+/* General styles */
+.docs h1 {
+  font-size: 2em;
+}
+
+.docs h2,
+.docs h3 {
+  margin-top: 1em;
+}
+
+.docs .rui-list-inline {
+  margin-top: 2em;
+}
+
+.docs pre,
+.docs form {
+  margin-bottom: 40px;
+}
+
+.docs table{
+    border: 1px solid #ddd;
+    
+}
+.docs td, .docs th{
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.docs-grid-example [class^=rui-col-]{
+    border: 1px solid #c8c9c7;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background: #fff;
+    color: #697684;
+    box-sizing: border-box;
+}
+.docs-snippet {
+  border: 1px solid #ddd;
+  padding: 3px 5px;
+  border-radius: 2px;
+  background: #fff;
+  color: #666;
+}
+
+/* Sit the icon vertically within an anchor, something we should look at for RUI */
+.docs a.rui-icon-left:before,
+.docs a span.rui-icon:before {
+  position: relative;
+  top: 0.2em;
+}
+
+
+/* Icons docs page - 3 column layout for the icon examples */
+.docs-icon-set {
+  margin-bottom: 3em;
+}
+
+.docs-icon-example .rui-icon:before {
+  font-size: 3em;
+}
+
+.docs-icon-example {
+  float: left;
+  width: 32%;
+  padding: 1em 0;
+  margin: 0 2% 2% 0;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.docs-icon-example:nth-of-type(3n+3) {
+  margin-right: 0;
+}
+
+.docs-icon-example .rui-icon:before {
+  display: block;
+  clear: both;
+}
+
+.docs .rui-icon-touch:after{
+    border: 1px dashed #555555;
+}
+.docs .rui-icon-touch{
+    margin-right: 10px;
+}
+
+.docs-grid-example strong {
+  text-align: center;
+  border: 1px solid #c8c9c7;
+  display: block;
+  padding: 1em 0;
+  background: #fff;
+  color: #697684;
+}
+
+
+/* Buttons */
+.docs-buttons-example {
+  margin-bottom: 3em;
+}
+
+.docs-buttons-dark {
+  background: #333f48;
+  border-radius: 4px;
+}
+
+.docs-buttons-example .docs-snippet {
+  margin-top: 7px;
+  display: inline-block;
+}
+
+.docs-buttons-example .rui-grid-row {
+  margin-bottom: 0.5em;
+}
+
+/* Only becase we wrap the dark BG colour around the example */
+.rui-grid .docs-buttons-example .rui-grid-column {
+  margin-bottom: 0;
+  padding: 1em;
+}
+
+
+/* Colours examples */
+.docs-swatches {
+  text-align: center;
+}
+
+.docs-swatch {
+  display: block;
+  padding: 1em 2em;
+  color: #fff;
+}
+
+.docs-light-swatch {
+  color: #333f48;
+}
+
+.docs-swatches .docs-swatch:nth-of-type(1) {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.docs-primary-brand .docs-swatch,
+.docs-swatches .docs-swatch:nth-of-type(2) {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.docs-swatches strong {
+  margin-bottom: 1em;
+}
+
+/* Base Utility classes examples */
+.docs-float-box {
+  border: 1px solid #e0e0e0;;
+  padding: 1em;
+  margin-bottom: 3em;
+  background: #fff;
+}
+
+.docs-float-left {
+  float: left;
+  background: #ebebeb;
+  width: 48%;
+  text-align: center;
+  padding: 3em 0;
+}
+
+.docs-float-left:last-child {
+  background: #dbdbdb;
+  margin-left: 4%;
+}
+
+
+/* Boilerplate */
+.docs-boilerplate-links a {
+  margin: 0 1em 2em 0;
+}
+.docs-hero-example{
+    background: url("https://farm3.staticflickr.com/2697/4371609375_faf2ee005f_b.jpg") center center / cover no-repeat scroll #f0f0f0;
+    margin-top: 0;
+}
+
+/* Typography */
+.docs-300 {
+  font-family: 'Museo-Sans-300', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.docs-500 {
+  font-family: 'Museo-Sans-500', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.docs-700 {
+  font-family: 'Museo-Sans-700', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#moveThePageToHere{
+    font-size: 20px;
+}
+
+
+
+
+

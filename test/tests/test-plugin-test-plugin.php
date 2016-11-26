@@ -1,14 +1,6 @@
 <?php
-/**
- * Class PluginTest
- *
- * @package Test_Plugin
- */
 
-/**
- * Plug test case.
- */
-class PluginTest extends WP_UnitTestCase {
+class Test_Plugin_Test_Plugin extends WP_UnitTestCase {
 
 	function test_awepop_add_view() {
 
@@ -73,9 +65,8 @@ class PluginTest extends WP_UnitTestCase {
 		$this->expectOutputString('<ul>'.$str.'</ul>');
 		awepop_popularity_list(3);
 
-		
+
 
 	}
 
 }
-

@@ -1,0 +1,128 @@
+body.archive.category .main-heading-banner { 
+  margin: 0 0 5px;
+  padding: 1em 0;
+  display: block !important; // get around dispay none in legacy markup
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (min-width: $phoneLandscape) {
+    transition: height 150ms ease-in;
+    height: 300px;
+    margin-bottom: 20px;
+    background: $defaultDark;
+  }
+
+  @media screen and (min-width: $tabletPortrait) {
+    height: 400px;
+    margin-bottom: 30px;
+  }
+  
+  @media screen and (min-width: $tabletLandscape) {
+    height: 450px;
+  }
+
+  &__image {
+    z-index: 10;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    min-height: 250px;
+    opacity: 0;
+    display: none;
+    @media screen and (min-width: $phoneLandscape) {
+      height: 400px;
+      opacity: 0.5;
+      display: block;
+    }
+    @media screen and (min-width: $tabletPortrait) {
+      height: 450px;
+      opacity: 0.5;
+    }
+    @media screen and (min-width: 1000px) {
+      height: auto;
+      width: 100%;
+    }
+	}
+
+  &__content {
+    z-index: 10;
+    @media screen and (min-width: $phoneLandscape) {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+    }
+    h1, h2, p {
+      text-align: center;
+      color: $defaultDark;
+      @media screen and (min-width: $phoneLandscape) {
+        color: #fff !important;
+        text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+      }
+		}
+		h1 {
+		  font-size: 2em;
+		  padding-top: 0;
+		  @media screen and (min-width: $tabletPortrait) {
+		    font-size: 3.5em;
+		  }
+		}
+		p {
+      font-size: 11px;
+      padding: 0 15px 0;
+      color: $defaultMedium;
+      @media (min-width: $tabletPortrait) {
+        display: block;
+        max-width: 720px;
+        margin: auto;
+        font-size: 1.375em;
+      }
+      &.main-heading-banner-page-label {
+        font-size: 1.5em;
+        padding-top: 0.5em;
+      }
+    }
+    .main-heading-banner-sponsor {
+      margin: 10px 15px 5px;
+      @media screen and (max-width: $phoneLandscape) {
+        background: #000; // Taubmans for now, needs to be dynamic
+        border-radius: 3px;
+      }
+    }
+    .main-heading-banner-sponsor-label {
+      padding-right: 5px;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    }
+    .main-heading-banner-sponsor-logo { 
+      max-width: 180px;
+      max-height: 50px;
+      display: inline-block;
+    }
+	}
+
+}
+
+main.home {
+  padding-top: 20px;
+  @media (min-width: $tabletPortrait) {
+    padding-top: 40px;
+  }
+}
+
+
+.block-header {
+  margin: 0.75em 0.5em 1em;
+  text-align: center;
+  line-height: 1.2;
+}
+
+
+// Home page
+.news-hub .category-panel,
+.category-news .category-panel {
+  position: relative;
+  background: $defaultDark;
+}
+

@@ -1,0 +1,30 @@
+{
+  "name": "rui-header-footer",
+  "version": "1.4.7",
+  "main": ["dist/rui-header-footer-all.css", "dist/rui-header-footer.js"],
+  "authors": [
+    "James Amon <james.amon@rea-group.com>"
+  ],
+  "description": "REA branded header and footer",
+  "homepage": "rea.to/ui",
+  "private": true,
+  "dependencies": {
+    "jquery": "1.8.3",
+    "rui-core": "git@git.realestate.com.au:rui/rui-core.git#^6.1.0"
+  },
+  "devDependencies": {
+    "rui-sass-common": "git@git.realestate.com.au:rui/rui-sass-common.git#^2.0.0",
+    "rui-user": "git@git.realestate.com.au:rui/rui-user.git#^0.4",
+    "requirejs-plugins": "~1.0.2"
+  },
+  "ignore": [
+      "**/.*",
+      "node_modules",
+      "bower_components",
+      "test",
+      "tests",
+      "build",
+      "spec",
+      "tmp"
+  ]
+}

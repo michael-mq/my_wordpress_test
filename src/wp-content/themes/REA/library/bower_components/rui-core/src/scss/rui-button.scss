@@ -1,0 +1,196 @@
+@import "resi-base.scss";
+
+/*
+ *
+ * Buttons
+ * Four Types:
+ * Basic: Transparent grey stroke
+ * Basic-White: White stroke transparent
+ * Brand: Solid primary brand colour
+ * Brand-Navy: Solid dark brand colour
+  ---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+$strokeWeight: 2px;
+$brandDisabled: #eaebec;
+
+%button-shared {
+  display: inline-block;
+  font-family: $fontMedium;
+  text-decoration: none;
+  padding: 0.875em 1em;
+  font-weight: normal;
+  font-size: 1em;
+  cursor:pointer;
+  border-radius: 4px;
+  line-height: 1;
+  border-width: $strokeWeight;
+  border-style: solid;
+  color: #fff;
+  background: transparent;
+  text-align: center;
+  transition-duration: 0.2s, 0.2s;
+  transition-timing-function: ease-in, ease-out;
+  @include respond-to(tablet-portrait-and-smaller) {
+    box-sizing: border-box;
+    border-width: 1px;
+  }  
+}
+
+
+.rui-button-basic {
+  @extend %button-shared;
+  color: $defaultDark;
+  border-color: #c3c8ce;
+  &:hover {
+    border-color: $defaultDark;
+    color: $defaultDark;
+  }
+  &.rui-button-disabled,
+  &.rui-button-disabled:hover {
+    color: #adb0b2;
+    background: #fff;
+  }
+}
+a.rui-button-basic {
+  color: $defaultDark;
+}
+
+.rui-button-basic-light {
+  @extend %button-shared;
+  border-color: #fff;
+  &:hover {
+    background-color: #fff;
+    color: $defaultDark;
+  }
+  &.rui-button-disabled,
+  &.rui-button-disabled:hover {
+    color: #a8a8a6;
+    background: transparent;
+    border-color: #a8a8a6;
+  }
+}
+
+.rui-button-brand {
+  @extend %button-shared;
+  border-color: $reaRed;
+  background: $reaRed;
+  &:hover {
+    background-color: #a30000;
+    border-color: #a30000;
+  }
+  &.rui-button-disabled,
+  &.rui-button-disabled:hover {
+    color: #8e9397;
+    border-color: $brandDisabled;
+    background: $brandDisabled;
+  }
+}
+
+.rui-button-brand-dark {
+  @extend %button-shared;
+  border-color: $defaultDark;
+  background: $defaultDark;
+  &:hover {
+    background-color: #161e24;
+    border-color: #161e24;
+  }
+  &.rui-button-disabled,
+  &.rui-button-disabled:hover {
+    color: #8e9397;
+    border-color: $brandDisabled;
+    background: $brandDisabled;
+  }
+}
+
+a.rui-button-basic-light,
+a.rui-button-brand,
+a.rui-button-brand-dark {
+  color:#fff;
+}
+
+.rui-button-disabled,
+.rui-button-disabled:hover {
+  border-color: $brandDisabled;
+  background: $brandDisabled;
+  color: $defaultDark;
+  cursor: default;
+  outline: none;
+}
+
+.rui-button-no-style {
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add to rui-button to make full width for mobile and table devices */
+@include respond-to(tablet-portrait-and-smaller) {
+  .rui-mobile-block {
+    display: block;
+    width: 100%;
+  }
+  .rui-button-mobile-smaller {
+    font-size: 0.875em;
+  }
+}
+
+
+
+/*
+ * NOT IN USE
+ * Grouped Buttons
+ * TODO: Finish this
+  ---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.rui-button {
+  display: block;
+  float: left;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  line-height: 20px;
+  color: #333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: whiteSmoke;
+  background-image: -moz-linear-gradient(top, white, #E6E6E6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#E6E6E6));
+  background-image: -webkit-linear-gradient(top, white, #E6E6E6);
+  background-image: -o-linear-gradient(top, white, #E6E6E6);
+  background-image: linear-gradient(to bottom, white, #E6E6E6);
+  background-repeat: repeat-x;
+  border: 1px solid #BBB;
+  border-color: #E6E6E6 #E6E6E6 #BFBFBF;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #A2A2A2;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.rui-button-group .rui-button:last-child {
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+
+.rui-button-group .rui-button:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.rui-button-group .rui-button + .rui-button {
+  margin-left: -1px;
+}
+
+.rui-button-group .rui-active {
+  background: $reaRed;
+  color: #fff;
+  text-shadow: none;
+}

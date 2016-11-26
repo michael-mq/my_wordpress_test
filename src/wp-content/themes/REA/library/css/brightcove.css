@@ -1,0 +1,167 @@
+.video-js .vjs-big-play-button {
+  top: 0 !important;
+  left: 0 !important;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.video-player {
+  box-shadow: 0 1px 2px #697684;
+}
+
+.video-player .video-padding {
+  padding-top: 40% !important;
+}
+
+.video-js .vjs-big-play-button:not(.ie8) {
+  width: 35%;
+  height: 35%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: initial;
+  background-color: initial;
+  background-image: url('https://www.realestate.com.au/news/wp-content/themes/REA/library/images/play.svg');
+  opacity: 1;
+}
+
+.video-js .vjs-big-play-button:hover {
+  opacity: 0.75;
+}
+
+.video-js .vjs-big-play-button:not(.ie8):before {
+  content: none;
+}
+
+.video-js .vjs-big-play-button:not(.ie8):hover {
+  box-shadow: none;
+}
+
+.video-js .vjs-big-play-button:not(.ie8) .video-play-icon circle:hover {
+  fill-opacity: 0.75;
+}
+
+.vjs-paused .vjs-control-bar {
+  visibility: hidden;
+}
+
+.vjs-has-started .vjs-control-bar {
+  visibility: visible;
+}
+
+.bc-player-default_default .vjs-poster {
+  background-size: cover !important;
+}
+
+.bc-iframe .vjs-playlist {
+  width: 31%;
+  padding: 10px !important;
+  background: #eee !important;
+}
+
+.vjs-playlist .vjs-playlist-item {
+  margin-bottom: 6px !important;
+  background: #fff !important;
+  box-shadow: 0 1px 2px #ccc !important;
+  height: auto !important;
+}
+
+.vjs-playlist .vjs-playlist-thumbnail {
+  width: 100px !important;
+  overflow: hidden !important;
+  margin-right: 0 !important;
+  height: 75px !important;
+}
+
+.vjs-playlist .vjs-selected .vjs-playlist-thumbnail.vjs-playlist-now-playing:before {
+  height: 75px !important;
+}
+
+.vjs-playlist img {
+  width: auto !important;
+}
+
+.vjs-playlist .vjs-playlist-description {
+  display: none !important;
+}
+
+.vjs-playlist cite {
+  height: auto !important;
+  overflow: visible !important;
+  white-space: pre-line !important;
+  font-size: 12px;
+  color: #333f48 !important;
+  padding: 6px !important;
+  max-height: 64px !important;
+  overflow: hidden !important;
+  line-height: 16px !important;
+}
+
+.vjs-playlist time {
+  font-size: 11px !important;
+  padding: 3px !important;
+}
+
+.vjs-playlist-enabled .vjs-poster {
+  background-size: cover !important;
+}
+
+.vjs-mouse.vjs-playlist .vjs-selected .vjs-playlist-thumbnail:before,
+.vjs-playlist .vjs-selected .vjs-playlist-thumbnail:before {
+  width: 100px;
+}
+
+.vjs-mouse.vjs-playlist .vjs-playlist-item:focus .vjs-playlist-thumbnail:before,
+.vjs-mouse.vjs-playlist .vjs-playlist-item:hover .vjs-playlist-thumbnail:before {
+  top: 22px;
+  left: 30px;
+}
+
+.bc-iframe,
+.bc-iframe body {
+  background-color: #eee;
+}
+
+@media (max-device-width: 768px) {
+  .video-player {
+    margin: 0 -15px;
+    max-width: none !important;
+  }
+
+  .bc-iframe .vjs-playlist {
+    display: block;
+    width: 100%;
+    position: static;
+    overflow: visible;
+  }
+  
+  .vjs-mouse.vjs-playlist .vjs-selected .vjs-playlist-thumbnail:before,
+  .vjs-playlist .vjs-selected .vjs-playlist-thumbnail:before,
+  .vjs-playlist .vjs-playlist-thumbnail {
+    width: 100% !important;
+  }
+
+  .video-player .video-padding {
+    padding-top: 100% !important;
+  }
+
+  .bc-iframe .video-js.vjs-playlist-enabled {
+    height: 56.25% !important;
+  }
+  .vjs-playlist .vjs-playlist-item {
+    float: left;
+    width: 31% !important;
+    margin-right: 3.333%;
+    margin-bottom: 12px !important;
+  }
+
+  .vjs-playlist .vjs-playlist-item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .vjs-playlist cite {
+    min-height: 50px;
+  }
+}
+
+

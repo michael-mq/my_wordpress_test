@@ -1,0 +1,99 @@
+/* fonts from rui.css */
+@font-face {
+	font-family: Museo-Sans-300;
+	src: url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-300-v1.eot);
+	src: url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-300-v1.eot?#iefix) format("embedded-opentype"), url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-300-v1.woff) format("woff"), url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-300-v1.ttf) format("truetype"), url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-300-v1.svg#Museo-Sans-300) format("svg");
+	font-weight: 400;
+	font-style: normal
+}
+@font-face {
+	font-family: Museo-Sans-500;
+	src: url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-500-v1.eot);
+	src: url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-500-v1.eot?#iefix) format("embedded-opentype"), url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-500-v1.woff) format("woff"), url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-500-v1.ttf) format("truetype"), url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-500-v1.svg#Museo-Sans-500) format("svg");
+	font-weight: 400;
+	font-style: normal
+}
+@font-face {
+	font-family: Museo-Sans-700;
+	src: url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-700-v2.eot);
+	src: url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-700-v2.eot?#iefix) format("embedded-opentype"), url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-700-v2.woff) format("woff"), url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-700-v2.ttf) format("truetype"), url(//s1.rui.au.reastatic.net/rui-static/font/museo-sans-700-v2.svg#Museo-Sans-700) format("svg");
+	font-weight: 400;
+	font-style: normal
+	}
+
+
+/* typoography styles  */
+p  { 
+	font-family: 'Museo-Sans-300', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a { 
+	color:#e4002b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Museo-Sans-500',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	margin: 0 0 30px;
+	color: #333f48;
+}
+h1 {
+	font-size: 2.95em
+}
+
+h2 {
+	font-size: 1.625em
+}
+
+h3 {
+	font-size: 1.75em
+}
+
+h1,
+h2,
+h3 {
+	padding-top: 30px;
+	font-weight: normal;
+	margin-bottom: 20px;
+	line-height: 1.2
+}
+strong { 
+	font-family: 'Museo-Sans-700', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+blockquote {
+	border-top: solid 1px #eee;
+	border-bottom: solid 1px #eee;
+	margin: 1em 0px;
+	padding: 1.5em 1em;
+	font-family: Georgia,Times,"Times New Roman",serif;
+	font-style: italic;
+	font-size: 1.5em;
+	position: relative;
+}
+blockquote p { 
+	font-family: Georgia,Times,"Times New Roman",serif;
+}
+
+blockquote:before {
+	display: block;
+	float: left;
+	content: "\201C";
+	font-size: 100px;
+	color: #fff;
+	background-color: #e4002b;
+	padding: 15px 12px 5px 8px;
+	width: 50px;
+	height: 50px;
+	line-height: 90px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+blockquote p {
+	margin-bottom: 0;
+	margin-left: 4em;
+	padding-bottom: 0;
+}
+

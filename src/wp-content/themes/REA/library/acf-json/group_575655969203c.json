@@ -1,0 +1,168 @@
+{
+    "key": "group_575655969203c",
+    "title": "Brand Details",
+    "fields": [
+        {
+            "key": "field_51f0723a4b521",
+            "label": "Brand Logo",
+            "name": "brand_logo",
+            "type": "image",
+            "instructions": "Upload the brand logo",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": 350,
+            "min_height": 100,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_57b53bfd93ba6",
+            "label": "Alternative Brand Logo",
+            "name": "alternative_brand_logo",
+            "type": "image",
+            "instructions": "Upload the brand logo",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": 350,
+            "min_height": 100,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_57ac08e9318da",
+            "label": "Brand Blurb",
+            "name": "blurb",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_51a2f1442d882",
+            "label": "Brand Website",
+            "name": "brand_website",
+            "type": "url",
+            "instructions": "Input the website for the Brand",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_51f071fe4b520",
+            "label": "Primary Brand Colour",
+            "name": "brand_colour",
+            "type": "color_picker",
+            "instructions": "Choose the brands primary colour",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#c61929"
+        },
+        {
+            "key": "field_57b53b82580bb",
+            "label": "Alternative Brand Colour",
+            "name": "alternative_brand_colour",
+            "type": "color_picker",
+            "instructions": "Choose the brands alternative colour for negative backgrounds",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#c61929"
+        },
+        {
+            "key": "field_54c087165010c",
+            "label": "Quote Colour",
+            "name": "quote_colour",
+            "type": "color_picker",
+            "instructions": "Choose the quote colour to complement the brand colour. ",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#c61929"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "brands"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1471495188
+}

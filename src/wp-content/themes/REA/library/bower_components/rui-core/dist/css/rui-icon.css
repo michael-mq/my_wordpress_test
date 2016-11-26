@@ -1,0 +1,479 @@
+/* RUI: REA User Interface library - Core - v6.5.0
+   Copyright 2016, REA Group */
+
+/**
+ * Global variables and mixins used across RUI SCSS
+ */
+/**
+ * Responsive Breakpoints
+ */
+/**
+ * Global variables and mixins used across RUI SCSS
+ */
+/**
+ * Responsive Breakpoints
+ */
+/* RUI Icon font via iconmoon */
+@font-face {
+  font-family: 'rui-icon';
+  src: url("//s1.rui.au.reastatic.net/rui-static/font/icons/2.6/rui-icon.eot");
+  src: url("//s1.rui.au.reastatic.net/rui-static/font/icons/2.6/rui-icon.eot?#iefix") format("embedded-opentype"), url("//s1.rui.au.reastatic.net/rui-static/font/icons/2.6/rui-icon.woff") format("woff"), url("//s1.rui.au.reastatic.net/rui-static/font/icons/2.6/rui-icon.ttf") format("truetype"), url("//s1.rui.au.reastatic.net/rui-static/font/icons/2.6/rui-icon.svg#rui-icon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Home pages, micro sites */
+.rui-main-logo {
+  margin-bottom: 24px;
+  height: 55px;
+  width: 310px;
+  /* On the Mobile sites, center the logo */ }
+  @media only screen and (max-width: 800px) {
+    .rui-main-logo {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      float: none; } }
+
+.rui-rea-logo.rui-main-logo {
+  background-size: 310px 55px; }
+
+.rui-rca .rui-main-logo {
+  height: 50px;
+  width: 350px; }
+
+.rui-rca .rui-rca-logo.rui-main-logo {
+  background-size: 350px 50px; }
+
+/* Used next to a leaderboard or when it needs to be smaller */
+.rui-secondary-logo {
+  float: left;
+  margin: 30px 0 24px;
+  width: 232px;
+  height: 42px;
+  background-size: 232px 42px; }
+
+/* Fill the space available when it is embedded */
+.rui-main-logo img,
+.rui-secondary-logo img {
+  width: 100%; }
+
+.rui-icon:before {
+  font-family: 'rui-icon';
+  content: attr(data-icon);
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: inline-block;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.rui-icon-touch {
+  position: relative; }
+  .rui-icon-touch:after {
+    content: " ";
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    margin-left: -15px;
+    margin-top: -15px; }
+
+/* Add this class if you append your icon to a node to place the icon on the left and add spacing */
+.rui-icon-left:before {
+  margin-right: 0.25em; }
+
+/* Use the following CSS code if you want to have a class per icon */
+.rui-icon-play-video:before {
+  content: "\e92e"; }
+
+.rui-icon-star-half-small:before {
+  content: "\e92d"; }
+
+.rui-icon-arrow-next:before {
+  content: "\e92a"; }
+
+.rui-icon-arrow-previous:before {
+  content: "\e92b"; }
+
+.rui-icon-question-small:before {
+  content: "\e90f"; }
+
+.rui-icon-question:before {
+  content: "\e929"; }
+
+.rui-icon-home-small:before {
+  content: "\e924"; }
+
+.rui-icon-cog-small:before {
+  content: "\e925"; }
+
+.rui-icon-user-on-small:before {
+  content: "\e926"; }
+
+.rui-icon-avatar-small:before {
+  content: "\e927"; }
+
+.rui-icon-user-off-small:before {
+  content: "\e928"; }
+
+.rui-icon-remove:before {
+  content: "\e917"; }
+
+.rui-icon-save-search-small:before {
+  content: "\e922"; }
+
+.rui-icon-save-search:before {
+  content: "\e923"; }
+
+.rui-icon-camera-inverted:before {
+  content: "\e902"; }
+
+.rui-icon-camera-small-inverted:before {
+  content: "\e90c"; }
+
+.rui-icon-camera-small:before {
+  content: "\e90d"; }
+
+.rui-icon-floorplan-inverted:before {
+  content: "\e90e"; }
+
+.rui-icon-floorplan-small:before {
+  content: "\e910"; }
+
+.rui-icon-play-inverted:before {
+  content: "\e911"; }
+
+.rui-icon-play-small-inverted:before {
+  content: "\e912"; }
+
+.rui-icon-play-small:before {
+  content: "\e913"; }
+
+.rui-icon-3d-tour-small-inverted:before {
+  content: "\e915"; }
+
+.rui-icon-3d-tour-small:before {
+  content: "\e916"; }
+
+.rui-icon-listview-small:before {
+  content: "\e918"; }
+
+.rui-icon-filters:before {
+  content: "\e919"; }
+
+.rui-icon-filters-small:before {
+  content: "\e91a"; }
+
+.rui-icon-edit-small:before {
+  content: "\e91b"; }
+
+.rui-icon-bell:before {
+  content: "\e91c"; }
+
+.rui-icon-bell-small:before {
+  content: "\e91d"; }
+
+.rui-icon-call-small:before {
+  content: "\e91e"; }
+
+.rui-icon-print:before {
+  content: "\e91f"; }
+
+.rui-icon-print-small:before {
+  content: "\e920"; }
+
+.rui-icon-email-small:before {
+  content: "\e921"; }
+
+.rui-icon-arrow-down-small:before {
+  content: "\e905"; }
+
+.rui-icon-arrow-left-small:before {
+  content: "\e906"; }
+
+.rui-icon-arrow-right-small:before {
+  content: "\e907"; }
+
+.rui-icon-arrow-up-small:before {
+  content: "\e908"; }
+
+.rui-icon-back-small:before {
+  content: "\e909"; }
+
+.rui-icon-forward-small:before {
+  content: "\e90a"; }
+
+.rui-icon-video:before {
+  content: "\e90b"; }
+
+.rui-icon-search-small:before {
+  content: "\e900"; }
+
+.rui-icon-multi-user-small:before {
+  content: "\e901"; }
+
+.rui-icon-3d-tour-inverted:before {
+  content: "\e914"; }
+
+.rui-icon-check-on:before {
+  content: "\e903"; }
+
+.rui-icon-check-off:before {
+  content: "\e904"; }
+
+.rui-icon-bed-small:before {
+  content: "\e601"; }
+
+.rui-icon-bath-small:before {
+  content: "\e602"; }
+
+.rui-icon-car-small:before {
+  content: "\e603"; }
+
+.rui-icon-save-hollow-small:before {
+  content: "\e604"; }
+
+.rui-icon-save-small:before {
+  content: "\e605"; }
+
+.rui-icon-3d-tour:before {
+  content: "\e606"; }
+
+.rui-icon-projects:before {
+  content: "\e608"; }
+
+.rui-icon-multi-user2:before {
+  content: "\e609"; }
+
+.rui-icon-download:before {
+  content: "\e60a"; }
+
+.rui-icon-minimise:before {
+  content: "\e60b"; }
+
+.rui-icon-minimise-small:before {
+  content: "\e932"; }
+
+.rui-icon-expand:before {
+  content: "\e930"; }
+
+.rui-icon-expand-small:before {
+  content: "\e931"; }
+
+.rui-icon-multi-device:before {
+  content: "\e60c"; }
+
+.rui-icon-desktop:before {
+  content: "\e60d"; }
+
+.rui-icon-laptop:before {
+  content: "\e60e"; }
+
+.rui-icon-watch:before {
+  content: "\e60f"; }
+
+.rui-icon-unlock:before {
+  content: "\e610"; }
+
+.rui-icon-confirm:before {
+  content: "\e611"; }
+
+.rui-icon-delete:before {
+  content: "\e612"; }
+
+.rui-icon-commission:before {
+  content: "\e613"; }
+
+.rui-icon-document:before {
+  content: "\e614"; }
+
+.rui-icon-reservation:before {
+  content: "\e615"; }
+
+.rui-icon-contact:before {
+  content: "\e616"; }
+
+.rui-icon-edit:before {
+  content: "\e617"; }
+
+.rui-icon-reports:before {
+  content: "\e618"; }
+
+.rui-icon-instagram:before {
+  content: "\e619"; }
+
+.rui-icon-save:before {
+  content: "\e024"; }
+
+.rui-icon-save-hollow:before {
+  content: "\e000"; }
+
+.rui-icon-user-on:before {
+  content: "\e001"; }
+
+.rui-icon-user-off:before {
+  content: "\e002"; }
+
+.rui-icon-play:before {
+  content: "\e011"; }
+
+.rui-icon-home:before {
+  content: "\e012"; }
+
+.rui-icon-github:before {
+  content: "\e013"; }
+
+.rui-icon-multi-user:before {
+  content: "\e014"; }
+
+.rui-icon-quotes:before {
+  content: "\e016"; }
+
+.rui-icon-back:before {
+  content: "\e017"; }
+
+.rui-icon-forward:before {
+  content: "\e018"; }
+
+.rui-icon-add:before {
+  content: "\e029"; }
+
+.rui-icon-arrow-down:before {
+  content: "\e02a"; }
+
+.rui-icon-arrow-right:before {
+  content: "\e02b"; }
+
+.rui-icon-call:before {
+  content: "\e02c"; }
+
+.rui-icon-floorplan:before {
+  content: "\e02d"; }
+
+.rui-icon-facebook:before {
+  content: "\e02e"; }
+
+.rui-icon-twitter:before {
+  content: "\e02f"; }
+
+.rui-icon-pinterest:before {
+  content: "\e030"; }
+
+.rui-icon-warning:before {
+  content: "\e008"; }
+
+.rui-icon-cog:before {
+  content: "\e009"; }
+
+.rui-icon-link:before {
+  content: "\e00a"; }
+
+.rui-icon-navdeck:before {
+  content: "\e00b"; }
+
+.rui-icon-video-camera:before {
+  content: "\e00c"; }
+
+.rui-icon-linkedin:before {
+  content: "\e00d"; }
+
+.rui-icon-googleplus:before {
+  content: "\e019"; }
+
+.rui-icon-avatar:before {
+  content: "\e01a"; }
+
+.rui-icon-listview:before {
+  content: "\e01b"; }
+
+.rui-icon-arrow-solid-up:before {
+  content: "\e01c"; }
+
+.rui-icon-arrow-solid-left:before {
+  content: "\e01d"; }
+
+.rui-icon-arrow-up:before {
+  content: "\e01e"; }
+
+.rui-icon-arrow-left:before {
+  content: "\e01f"; }
+
+.rui-icon-bed:before {
+  content: "\e021"; }
+
+.rui-icon-bath:before {
+  content: "\e022"; }
+
+.rui-icon-car:before {
+  content: "\e023"; }
+
+.rui-icon-mappin:before {
+  content: "\e025"; }
+
+.rui-icon-search:before {
+  content: "\e026"; }
+
+.rui-icon-office:before {
+  content: "\e003"; }
+
+.rui-icon-image:before {
+  content: "\e004"; }
+
+.rui-icon-tags:before {
+  content: "\e005"; }
+
+.rui-icon-iphone:before {
+  content: "\e006"; }
+
+.rui-icon-ipad:before {
+  content: "\e007"; }
+
+.rui-icon-camera:before {
+  content: "\e00e"; }
+
+.rui-icon-rss:before {
+  content: "\e00f"; }
+
+.rui-icon-comments:before {
+  content: "\e010"; }
+
+.rui-icon-calculator:before {
+  content: "\e032"; }
+
+.rui-icon-calendar:before {
+  content: "\e035"; }
+
+.rui-icon-tick:before {
+  content: "\e039"; }
+
+.rui-icon-lock:before {
+  content: "\e044"; }
+
+.rui-icon-youtube:before {
+  content: "\e046"; }
+
+.rui-icon-email:before {
+  content: "\e020"; }
+
+.rui-icon-arrow-solid-right:before {
+  content: "\e027"; }
+
+.rui-icon-arrow-solid-down:before {
+  content: "\e028"; }
+
+.rui-icon-share:before {
+  content: "\e031"; }
+
+.rui-icon-cross:before {
+  content: "\e600"; }
+
+.rui-icon-dollar:before {
+  content: "\e033"; }
+
+.rui-icon-wordpress:before {
+  content: "\e034"; }

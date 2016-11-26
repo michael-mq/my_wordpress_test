@@ -1,0 +1,39 @@
+/* limit width to make the main column of the docs 1010px; */
+
+.docs .rui-grid {
+  margin: 0 auto;
+  max-width: 1279px;
+}
+
+body.docs {
+  padding-top: 80px;
+}
+
+.docs .rui-header {
+  height: 80px;
+  line-height: 80px;
+}
+
+.docs .rui-header a {
+  color: #333f48;
+}
+
+.docs .main-title {
+  border: 2px solid #333f48;
+  padding: 0.25em 0.5em;
+}
+
+/* To overwrite the specificity currently in RUI */
+body.docs .rui-body-content {
+  padding: 60px 0;
+  background: #f5f5f6;
+}
+
+.docs .main-nav {
+  float: right;
+}
+
+.docs .main-nav a {
+  padding: 0.25em;
+  margin-left: 1em;
+}

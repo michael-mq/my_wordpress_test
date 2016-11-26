@@ -1,0 +1,217 @@
+.column {
+  background: #fff;
+}
+
+.feed a {
+  color: #333f48;
+  display: block;
+}
+
+.feed article {
+  border-bottom: 1px solid #eee;
+  padding: 1em 0;
+  line-height: 1.2;
+}
+
+.feed article:first-of-type {
+  padding-top: 0;
+  font-size: 1.5em;
+}
+
+.feed article figure {
+  max-width: 90px;
+  float: left;
+  margin-right: 10px;
+}
+
+.feed article figure img {
+  width: 100%;
+}
+
+.feed article small {
+  text-transform: uppercase;
+  display: block;
+  color: #999;
+  margin-left: 100px;
+  padding-top: 10px;
+}
+
+.features {
+  background: #fff;
+}
+
+.features img {
+  width: 100%;
+}
+
+.rui-grid .rui-grid-primary {
+  padding-right: 300px;
+}
+
+.rui-grid .rui-grid-secondary {
+  display: none;
+}
+
+.main-heading {
+  display: none;
+  font-size: 0.5em;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.main-heading h1,
+.main-heading h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.main-heading.mobile {
+  display: block;
+  margin-top: 3em;
+}
+
+.hero {
+  margin: 0 -15px 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero img {
+  width: auto;
+  height: 300px;
+  margin-left: -50px;
+}
+
+.hero aside {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-shadow: 0 1px 1px #000;
+  box-sizing: border-box;
+  line-height: 1.2;
+  padding: 3em 15px 1em;
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
+}
+
+.hero aside strong {
+  font-size: 2em;
+  margin-bottom: 10px;
+  display: block;
+  font-family: "Museo-Sans-300";
+}
+
+.hero aside p {
+  margin: 0;
+}
+
+.subhero {
+  width: 48%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.subhero:nth-of-type(odd) {
+  float: right;
+}
+
+/* Big phones - need to review 420 as a breakpoint */
+@media (min-width: 420px) {
+  .hero img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+/* Landscape phone */
+@media (min-width: 600px) {
+  .column {
+    float: left;
+    width: 50%;
+    min-width: 300px;
+  }
+  .hero {
+    margin: 0 0 20px;
+  }
+
+  .main-heading {
+    display: block;
+  }
+  .main-heading.mobile {
+    display: none;
+  }
+  .main-heading h1 {
+    font-size: 4em;
+  }
+
+  .feed {
+    width: 300px;
+  }
+
+  .features {
+    float: right;
+    width: 100%;
+    padding-left: 300px;
+    margin-left: -330px;
+  }
+  .rui-grid .rui-grid-primary {
+    padding-right: 0;
+  }
+}
+
+/* Landscape ipad and desktop */
+@media (min-width: 970px) {
+  .rui-grid .rui-grid-secondary {
+    display: block;
+  }
+  .rui-grid .rui-grid-primary {
+    padding-right: 300px;
+  }
+  .features .column-wrap {
+    width: 300px;
+    margin: auto;
+  }
+  .hero img {
+    width: auto;
+  }
+  .hero aside strong {
+    font-size: 1em;
+  }
+}
+
+/* Portrait ipad */
+@media (min-width: 767px) {
+  /* Portrait ipad */
+}
+
+
+/* Wider than landscape ipad */
+@media (min-width: 1025px) {
+  .features .column-wrap {
+    width: 380px;
+  }
+  .hero {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+/* This needs updating */
+@media (max-width: 600px) {
+  .page-template-new-home-page.rui-responsive .rui-grid .rui-grid-primary {
+    padding: 0;
+  }
+}
+
+/* needs to be somewhere else */
+.mini-nav .menu li a {
+  padding-left: 0;
+  margin-right: 15px;
+}

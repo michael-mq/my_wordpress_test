@@ -1,0 +1,119 @@
+{
+    "key": "group_575654de38051",
+    "title": "Homepage featured categories New",
+    "fields": [
+        {
+            "key": "field_52a9026619176",
+            "label": "Featured category heading",
+            "name": "feature_heading",
+            "type": "text",
+            "instructions": "Input the text for the heading",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "What's hot right now in...",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "formatting": "html",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_52a8fc8624551",
+            "label": "Featured Categories - What's hot right now in...",
+            "name": "featured_categories",
+            "type": "repeater",
+            "instructions": "Choose 3 categories to feature on the REA Homepage. By default we will grab the 3 most popular posts. You may overwrite this by selecting your own featured posts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "row_min": "",
+            "row_limit": 3,
+            "layout": "row",
+            "button_label": "Add Category",
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_52a8fcb224552",
+                    "label": "Category",
+                    "name": "category",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "category",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "load_save_terms": 0,
+                    "return_format": "id",
+                    "multiple": 0,
+                    "add_term": 1,
+                    "load_terms": 0,
+                    "save_terms": 0
+                },
+                {
+                    "key": "field_52a8fce124553",
+                    "label": "Posts",
+                    "name": "posts",
+                    "type": "relationship",
+                    "instructions": "Overwrite the default popular posts with your own selection",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "object",
+                    "post_type": [
+                        "post"
+                    ],
+                    "taxonomy": [],
+                    "filters": [
+                        "search"
+                    ],
+                    "max": 3,
+                    "min": 0,
+                    "elements": [
+                        "post_title"
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-general"
+            }
+        ]
+    ],
+    "menu_order": 3,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1465276444
+}

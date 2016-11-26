@@ -1,0 +1,19 @@
+@import "resi-base.scss";
+
+.rui-hero{
+  padding: 100px 0;
+  margin-top: -30px;
+  .rui-hero-heading{
+    font-family: $fontDefault;
+    font-weight: normal;
+    font-size: 1.813em;
+    line-height: 1.250em;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  }
+  .rui-hero-content{
+    margin:auto;
+    max-width:750px;
+  }
+}

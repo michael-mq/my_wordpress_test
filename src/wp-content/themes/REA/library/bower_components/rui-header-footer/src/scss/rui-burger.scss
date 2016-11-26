@@ -1,0 +1,116 @@
+@import "resi-base.scss";
+
+$burgerInactiveIconColor: #434343;
+$burgerIconColor: #fff;
+
+.rui-burger body {
+  position: relative;
+}
+
+.rui-burger-toggle {
+  @extend %mobile-navigation-call-to-action;
+}
+.rui-mobile-cta{
+  display: none;
+  position: relative;
+  top: 2px;
+  @include respond-to(tablet-portrait-and-smaller) {
+    display: block;
+  }
+  @extend %mobile-navigation-call-to-action;
+}
+.rui-mobile-icons{
+  @extend %mobile-navigation-call-to-action;
+}
+
+.rui-burger-container {
+  .rui-nav-item {
+    &:first-child {
+      margin-top: 0;
+    }
+    border-bottom: 1px solid $borderColor;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    a, a:hover {
+      color: $defaultDark;
+      font-size: .875em;
+      font-weight: normal;
+      text-decoration: none;
+      display: block;
+      padding: 0 18px 0 22px;
+      height: 48px;
+      line-height: 48px;
+      font-family: $fontDefault;
+    }
+    a:active {
+      background-color: #f2f2f2;
+    }
+    .rui-icon:before {
+      color: $burgerInactiveIconColor;
+      font-size: 19px;
+      position: relative;
+      top: 2px;
+    }
+    &.rui-nav-active a {
+      border-left: 4px solid $reaRed;
+      padding-left: 18px;
+      color: $reaRed;
+    }
+  }
+  .rui-nav-inline {
+    float: left;
+    width: 33.333333333%;
+    a {
+      border-left: 1px solid #f0f0f0;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+    }
+    a:first {
+      border-left: none;
+    }
+    a:hover {
+      padding-left: 18px;
+    }
+  }
+  .rui-nav-main{
+    a, a:hover{
+      font-family: $fontMedium;      
+    }
+  }
+}
+
+.rui-mobile-nav{
+  display: none;
+}
+.rui-mobile-nav .rui-nav-item-external a {
+  background: url($staticImgs + 'mobile-home-sprite-v1.png') no-repeat right -32px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .rui-mobile-nav .rui-nav-item-external a {
+    background-image: url($staticImgs + 'mobile-home-sprite@2x-v1.png');
+    background-size: 45px 141px;
+  }
+}
+
+//Styling the navigation menu items for the mobile header.
+%mobile-navigation-call-to-action{
+  position: relative;
+  font-size: 1.2em;
+  white-space: nowrap;
+  a, button{
+    color:$defaultMedium;
+  }
+  .hit-box {
+    display: block;
+    width: 50px;
+    height: 49px;
+    position: absolute;
+    top: -17px;
+    left: -15px;
+  }
+}
+

@@ -1,0 +1,162 @@
+/* RUI: REA User Interface library - Core - v6.5.0
+   Copyright 2016, REA Group */
+
+/**
+ * Global variables and mixins used across RUI SCSS
+ */
+/**
+ * Responsive Breakpoints
+ */
+/*
+ *
+ * Buttons
+ * Four Types:
+ * Basic: Transparent grey stroke
+ * Basic-White: White stroke transparent
+ * Brand: Solid primary brand colour
+ * Brand-Navy: Solid dark brand colour
+  ---------------------------------------------------------------------------------------------------------------------------------------------------- */
+.rui-button-basic, .rui-button-basic-light, .rui-button-brand, .rui-button-brand-dark {
+  display: inline-block;
+  font-family: "Museo-Sans-500", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  padding: 0.875em 1em;
+  font-weight: normal;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  line-height: 1;
+  border-width: 2px;
+  border-style: solid;
+  color: #fff;
+  background: transparent;
+  text-align: center;
+  transition-duration: 0.2s, 0.2s;
+  transition-timing-function: ease-in, ease-out; }
+  @media only screen and (max-width: 800px) {
+    .rui-button-basic, .rui-button-basic-light, .rui-button-brand, .rui-button-brand-dark {
+      box-sizing: border-box;
+      border-width: 1px; } }
+
+.rui-button-basic {
+  color: #333f48;
+  border-color: #c3c8ce; }
+  .rui-button-basic:hover {
+    border-color: #333f48;
+    color: #333f48; }
+  .rui-button-basic.rui-button-disabled, .rui-button-basic.rui-button-disabled:hover {
+    color: #adb0b2;
+    background: #fff; }
+
+a.rui-button-basic {
+  color: #333f48; }
+
+.rui-button-basic-light {
+  border-color: #fff; }
+  .rui-button-basic-light:hover {
+    background-color: #fff;
+    color: #333f48; }
+  .rui-button-basic-light.rui-button-disabled, .rui-button-basic-light.rui-button-disabled:hover {
+    color: #a8a8a6;
+    background: transparent;
+    border-color: #a8a8a6; }
+
+.rui-button-brand {
+  border-color: #e4002b;
+  background: #e4002b; }
+  .rui-button-brand:hover {
+    background-color: #a30000;
+    border-color: #a30000; }
+  .rui-button-brand.rui-button-disabled, .rui-button-brand.rui-button-disabled:hover {
+    color: #8e9397;
+    border-color: #eaebec;
+    background: #eaebec; }
+
+.rui-button-brand-dark {
+  border-color: #333f48;
+  background: #333f48; }
+  .rui-button-brand-dark:hover {
+    background-color: #161e24;
+    border-color: #161e24; }
+  .rui-button-brand-dark.rui-button-disabled, .rui-button-brand-dark.rui-button-disabled:hover {
+    color: #8e9397;
+    border-color: #eaebec;
+    background: #eaebec; }
+
+a.rui-button-basic-light,
+a.rui-button-brand,
+a.rui-button-brand-dark {
+  color: #fff; }
+
+.rui-button-disabled,
+.rui-button-disabled:hover {
+  border-color: #eaebec;
+  background: #eaebec;
+  color: #333f48;
+  cursor: default;
+  outline: none; }
+
+.rui-button-no-style {
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0; }
+
+/* Add to rui-button to make full width for mobile and table devices */
+@media only screen and (max-width: 800px) {
+  .rui-mobile-block {
+    display: block;
+    width: 100%; }
+  .rui-button-mobile-smaller {
+    font-size: 0.875em; } }
+
+/*
+ * NOT IN USE
+ * Grouped Buttons
+ * TODO: Finish this
+  ---------------------------------------------------------------------------------------------------------------------------------------------------- */
+.rui-button {
+  display: block;
+  float: left;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  line-height: 20px;
+  color: #333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: whiteSmoke;
+  background-image: -moz-linear-gradient(top, white, #E6E6E6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#E6E6E6));
+  background-image: -webkit-linear-gradient(top, white, #E6E6E6);
+  background-image: -o-linear-gradient(top, white, #E6E6E6);
+  background-image: linear-gradient(to bottom, white, #E6E6E6);
+  background-repeat: repeat-x;
+  border: 1px solid #BBB;
+  border-color: #E6E6E6 #E6E6E6 #BFBFBF;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #A2A2A2;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
+
+.rui-button-group .rui-button:last-child {
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px; }
+
+.rui-button-group .rui-button:first-child {
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px; }
+
+.rui-button-group .rui-button + .rui-button {
+  margin-left: -1px; }
+
+.rui-button-group .rui-active {
+  background: #e4002b;
+  color: #fff;
+  text-shadow: none; }

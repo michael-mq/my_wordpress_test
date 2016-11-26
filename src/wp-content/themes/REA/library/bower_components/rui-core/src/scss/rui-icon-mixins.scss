@@ -1,0 +1,297 @@
+@import "resi-base.scss";
+
+/* RUI Icon font via iconmoon */
+@font-face {
+  font-family: 'rui-icon';
+  src:url($staticFonts + 'icons/2.6/rui-icon.eot');
+  src:url($staticFonts + 'icons/2.6/rui-icon.eot?#iefix') format('embedded-opentype'),
+    url($staticFonts + 'icons/2.6/rui-icon.woff') format('woff'),
+    url($staticFonts + 'icons/2.6/rui-icon.ttf') format('truetype'),
+    url($staticFonts + 'icons/2.6/rui-icon.svg#rui-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin rui-icon() {
+  &:before {
+    font-family: 'rui-icon';
+    content: attr(data-icon);
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    display: inline-block;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@mixin rui-icon-type($iconName) {
+  &:before {
+    @if $iconName == 'rui-icon-play-video' {
+      content: "\e92e";
+    } @else if $iconName == 'rui-icon-star-half-small' {
+      content: "\e92d";
+    } @else if $iconName == 'rui-icon-arrow-next' {
+      content: "\e92a";
+    } @else if $iconName == 'rui-icon-arrow-previous' {
+      content: "\e92b";
+    } @else if $iconName == 'rui-icon-question-small' {
+      content: "\e90f";
+    } @else if $iconName == 'rui-icon-question' {
+      content: "\e929";
+    } @else if $iconName == 'rui-icon-home-small' {
+      content: "\e924";
+    } @else if $iconName == 'rui-icon-cog-small' {
+      content: "\e925";
+    } @else if $iconName == 'rui-icon-user-on-small' {
+      content: "\e926";
+    } @else if $iconName == 'rui-icon-avatar-small' {
+      content: "\e927";
+    } @else if $iconName == 'rui-icon-user-off-small' {
+      content: "\e928";
+    } @else if $iconName == 'rui-icon-remove' {
+      content: "\e917";
+    } @else if $iconName == 'rui-icon-save-search-small' {
+      content: "\e922";
+    } @else if $iconName == 'rui-icon-save-search' {
+      content: "\e923";
+    } @else if $iconName == 'rui-icon-camera-inverted' {
+      content: "\e902";
+    } @else if $iconName == 'rui-icon-camera-small-inverted' {
+      content: "\e90c";
+    } @else if $iconName == 'rui-icon-camera-small' {
+      content: "\e90d";
+    } @else if $iconName == 'rui-icon-floorplan-inverted' {
+      content: "\e90e";
+    } @else if $iconName == 'rui-icon-floorplan-small' {
+      content: "\e910";
+    } @else if $iconName == 'rui-icon-play-inverted' {
+      content: "\e911";
+    } @else if $iconName == 'rui-icon-play-small-inverted' {
+      content: "\e912";
+    } @else if $iconName == 'rui-icon-play-small' {
+      content: "\e913";
+    } @else if $iconName == 'rui-icon-3d-tour-small-inverted' {
+      content: "\e915";
+    } @else if $iconName == 'rui-icon-3d-tour-small' {
+      content: "\e916";
+    } @else if $iconName == 'rui-icon-listview-small' {
+      content: "\e918";
+    } @else if $iconName == 'rui-icon-filters' {
+      content: "\e919";
+    } @else if $iconName == 'rui-icon-filters-small' {
+      content: "\e91a";
+    } @else if $iconName == 'rui-icon-edit-small' {
+      content: "\e91b";
+    } @else if $iconName == 'rui-icon-bell' {
+      content: "\e91c";
+    } @else if $iconName == 'rui-icon-bell-small' {
+      content: "\e91d";
+    } @else if $iconName == 'rui-icon-call-small' {
+      content: "\e91e";
+    } @else if $iconName == 'rui-icon-print' {
+      content: "\e91f";
+    } @else if $iconName == 'rui-icon-print-small' {
+      content: "\e920";
+    } @else if $iconName == 'rui-icon-email-small' {
+      content: "\e921";
+    } @else if $iconName == 'rui-icon-arrow-down-small' {
+      content: "\e905";
+    } @else if $iconName == 'rui-icon-arrow-left-small' {
+      content: "\e906";
+    } @else if $iconName == 'rui-icon-arrow-right-small' {
+      content: "\e907";
+    } @else if $iconName == 'rui-icon-arrow-up-small' {
+      content: "\e908";
+    } @else if $iconName == 'rui-icon-back-small' {
+      content: "\e909";
+    } @else if $iconName == 'rui-icon-forward-small' {
+      content: "\e90a";
+    } @else if $iconName == 'rui-icon-video' {
+      content: "\e90b";
+    } @else if $iconName == 'rui-icon-search-small' {
+      content: "\e900";
+    } @else if $iconName == 'rui-icon-multi-user-small' {
+      content: "\e901";
+    } @else if $iconName == 'rui-icon-3d-tour-inverted' {
+      content: "\e914";
+    } @else if $iconName == 'rui-icon-check-on' {
+      content: "\e903";
+    } @else if $iconName == 'rui-icon-check-off' {
+      content: "\e904";
+    } @else if $iconName == 'rui-icon-bed-small' {
+      content: "\e601";
+    } @else if $iconName == 'rui-icon-bath-small' {
+      content: "\e602";
+    } @else if $iconName == 'rui-icon-car-small' {
+      content: "\e603";
+    } @else if $iconName == 'rui-icon-save-hollow-small' {
+      content: "\e604";
+    } @else if $iconName == 'rui-icon-save-small' {
+      content: "\e605";
+    } @else if $iconName == 'rui-icon-3d-tour' {
+      content: "\e606";
+    } @else if $iconName == 'rui-icon-projects' {
+      content: "\e608";
+    } @else if $iconName == 'rui-icon-multi-user2' {
+      content: "\e609";
+    } @else if $iconName == 'rui-icon-download' {
+      content: "\e60a";
+    } @else if $iconName == 'rui-icon-expand' {
+      content: "\e930";
+    } @else if $iconName == 'rui-icon-expand-small' {
+      content: "\e931";
+    } @else if $iconName == 'rui-icon-minimise' {
+      content: "\e60b";
+    } @else if $iconName == 'rui-icon-minimise-small' {
+      content: "\e932";
+    } @else if $iconName == 'rui-icon-multi-device' {
+      content: "\e60c";
+    } @else if $iconName == 'rui-icon-desktop' {
+      content: "\e60d";
+    } @else if $iconName == 'rui-icon-laptop' {
+      content: "\e60e";
+    } @else if $iconName == 'rui-icon-watch' {
+      content: "\e60f";
+    } @else if $iconName == 'rui-icon-unlock' {
+      content: "\e610";
+    } @else if $iconName == 'rui-icon-confirm' {
+      content: "\e611";
+    } @else if $iconName == 'rui-icon-delete' {
+      content: "\e612";
+    } @else if $iconName == 'rui-icon-commission' {
+      content: "\e613";
+    } @else if $iconName == 'rui-icon-document' {
+      content: "\e614";
+    } @else if $iconName == 'rui-icon-reservation' {
+      content: "\e615";
+    } @else if $iconName == 'rui-icon-contact' {
+      content: "\e616";
+    } @else if $iconName == 'rui-icon-edit' {
+      content: "\e617";
+    } @else if $iconName == 'rui-icon-reports' {
+      content: "\e618";
+    } @else if $iconName == 'rui-icon-instagram' {
+      content: "\e619";
+    } @else if $iconName == 'rui-icon-save' {
+      content: "\e024";
+    } @else if $iconName == 'rui-icon-save-hollow' {
+      content: "\e000";
+    } @else if $iconName == 'rui-icon-user-on' {
+      content: "\e001";
+    } @else if $iconName == 'rui-icon-user-off' {
+      content: "\e002";
+    } @else if $iconName == 'rui-icon-play' {
+      content: "\e011";
+    } @else if $iconName == 'rui-icon-home' {
+      content: "\e012";
+    } @else if $iconName == 'rui-icon-github' {
+      content: "\e013";
+    } @else if $iconName == 'rui-icon-multi-user' {
+      content: "\e014";
+    } @else if $iconName == 'rui-icon-quotes' {
+      content: "\e016";
+    } @else if $iconName == 'rui-icon-back' {
+      content: "\e017";
+    } @else if $iconName == 'rui-icon-forward' {
+      content: "\e018";
+    } @else if $iconName == 'rui-icon-add' {
+      content: "\e029";
+    } @else if $iconName == 'rui-icon-arrow-down' {
+      content: "\e02a";
+    } @else if $iconName == 'rui-icon-arrow-right' {
+      content: "\e02b";
+    } @else if $iconName == 'rui-icon-call' {
+      content: "\e02c";
+    } @else if $iconName == 'rui-icon-floorplan' {
+      content: "\e02d";
+    } @else if $iconName == 'rui-icon-facebook' {
+      content: "\e02e";
+    } @else if $iconName == 'rui-icon-twitter' {
+      content: "\e02f";
+    } @else if $iconName == 'rui-icon-pinterest' {
+      content: "\e030";
+    } @else if $iconName == 'rui-icon-warning' {
+      content: "\e008";
+    } @else if $iconName == 'rui-icon-cog' {
+      content: "\e009";
+    } @else if $iconName == 'rui-icon-link' {
+      content: "\e00a";
+    } @else if $iconName == 'rui-icon-navdeck' {
+      content: "\e00b";
+    } @else if $iconName == 'rui-icon-video-camera' {
+      content: "\e00c";
+    } @else if $iconName == 'rui-icon-linkedin' {
+      content: "\e00d";
+    } @else if $iconName == 'rui-icon-googleplus' {
+      content: "\e019";
+    } @else if $iconName == 'rui-icon-avatar' {
+      content: "\e01a";
+    } @else if $iconName == 'rui-icon-listview' {
+      content: "\e01b";
+    } @else if $iconName == 'rui-icon-arrow-solid-up' {
+      content: "\e01c";
+    } @else if $iconName == 'rui-icon-arrow-solid-left' {
+      content: "\e01d";
+    } @else if $iconName == 'rui-icon-arrow-up' {
+      content: "\e01e";
+    } @else if $iconName == 'rui-icon-arrow-left' {
+      content: "\e01f";
+    } @else if $iconName == 'rui-icon-bed' {
+      content: "\e021";
+    } @else if $iconName == 'rui-icon-bath' {
+      content: "\e022";
+    } @else if $iconName == 'rui-icon-car' {
+      content: "\e023";
+    } @else if $iconName == 'rui-icon-mappin' {
+      content: "\e025";
+    } @else if $iconName == 'rui-icon-search' {
+      content: "\e026";
+    } @else if $iconName == 'rui-icon-office' {
+      content: "\e003";
+    } @else if $iconName == 'rui-icon-image' {
+      content: "\e004";
+    } @else if $iconName == 'rui-icon-tags' {
+      content: "\e005";
+    } @else if $iconName == 'rui-icon-iphone' {
+      content: "\e006";
+    } @else if $iconName == 'rui-icon-ipad' {
+      content: "\e007";
+    } @else if $iconName == 'rui-icon-camera' {
+      content: "\e00e";
+    } @else if $iconName == 'rui-icon-rss' {
+      content: "\e00f";
+    } @else if $iconName == 'rui-icon-comments' {
+      content: "\e010";
+    } @else if $iconName == 'rui-icon-calculator' {
+      content: "\e032";
+    } @else if $iconName == 'rui-icon-calendar' {
+      content: "\e035";
+    } @else if $iconName == 'rui-icon-tick' {
+      content: "\e039";
+    } @else if $iconName == 'rui-icon-lock' {
+      content: "\e044";
+    } @else if $iconName == 'rui-icon-youtube' {
+      content: "\e046";
+    } @else if $iconName == 'rui-icon-email' {
+      content: "\e020";
+    } @else if $iconName == 'rui-icon-arrow-solid-right' {
+      content: "\e027";
+    } @else if $iconName == 'rui-icon-arrow-solid-down' {
+      content: "\e028";
+    } @else if $iconName == 'rui-icon-share' {
+      content: "\e031";
+    } @else if $iconName == 'rui-icon-cross' {
+      content: "\e600";
+    } @else if $iconName == 'rui-icon-dollar' {
+      content: "\e033";
+    } @else if $iconName == 'rui-icon-wordpress' {
+      content: "\e034";
+    }
+  }
+}
+

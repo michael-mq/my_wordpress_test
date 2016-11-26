@@ -1,0 +1,567 @@
+@import "resi-base.scss";
+
+//Local colors
+$footerLightGray: #9b9b9b;
+$footerMediumGray: #c2c2c2;
+$footerSeparatorGray: #f3f3f3;
+.rui-footer {
+  clear: both;
+  font-size: 0.75em;
+  line-height: 1;
+  background: #fff;
+  padding-bottom: 0px;
+  border-top: 1px solid #e3e3e3;
+  min-width: $desktop;
+  .rui-responsive & {
+    min-width: 0;
+  }
+  p, img, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .rui-footer-faded-background {
+    background: #f5f5f5;
+  }
+  a {
+    img {
+      border: 0;
+    }
+    display: inline-block;
+    text-decoration: none;
+    color: $footerLightGray;
+    &:hover {
+      text-decoration: none;
+      color: $reaRed;
+    }
+  }
+  .rui-footer-column {
+    padding: 0 $gridPadding;
+    max-width: $desktop - ($gridPadding*2);
+    overflow: auto;
+    margin: 0 auto;
+  }
+  .rui-footer-social {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    float: left;
+    li {
+      margin-right: 7px;
+      margin-left: 7px;
+      &:first-child {
+        margin-left: 0;
+      }
+      a {
+        border-radius: 10px;
+        color: white;
+        font-size: 22px;
+        background-color: #bababa;
+        line-height: 33px;
+        width:33px;
+        height: 33px;
+        &.rui-icon:before{
+          line-height: 33px;
+          width:33px;
+          height: 33px;
+        }
+        &.rui-icon:hover {
+          color: #fff;
+        }
+        &.rui-icon-facebook:hover {
+          background-color: $facebookColor;
+        }
+        &.rui-icon-twitter:hover {
+          background-color: $twitterColor;
+        }
+        &.rui-icon-pinterest:hover {
+          background-color: $pinterestColor;
+        }
+        &.rui-icon-linkedin:hover {
+          background-color: $linkedinColor;
+        }
+        &.rui-icon-youtube:hover {
+          background-color: $youtubeColor;
+        }
+        &.rui-icon-googleplus:hover {
+          background-color: $googleplusColor;
+        }
+      }
+    }
+  }
+  .rui-footer-navigation {
+    padding-bottom: 2.5em;
+    text-align: right;
+    ul {
+      text-align: center;
+      display: inline-block;
+      &:first-child {
+        margin-right: 4px;
+      }
+      li {
+        display: inline-block;
+        margin-right: 25px;
+      }
+    }
+  }
+  .rui-footer-rea-group {
+    padding-bottom: 15px;
+  }
+  .rui-footer-international-sites, .rui-footer-partner-sites {
+    margin-bottom: 12px;
+    a {
+      padding: 5px 5px 5px 0px;
+    }
+    .pipe-separator {
+      color: $footerLightGray;
+      display: inline;
+      padding: 0px;
+      margin: 0 4px 0 0;
+    }
+  }
+  #rui-footer-international-sites-content, #rui-footer-partner-sites-content {
+    ul {
+      display: inline;
+    }
+    li {
+      display: inline;
+      list-style-type: none;
+    }
+  }
+  .rui-footer-rea-sites {
+    padding-top: 32px;
+    overflow: hidden;
+    li {
+      display: inline-block;
+      margin-right: 16px;
+      .rui-footer-rea-site-img {
+        display: inline-block;
+        height: 23px;
+      }
+    }
+    //To hide the mobile phone arrow for non-mobile screen sizes
+    .rui-icon {
+      display: none;
+    }
+    .rui-footer-rea-site-img {
+      background: url( $staticImgs + "logo-footer-sprites.png") no-repeat 0 0;
+      @include respond-to(retina) {
+        & {
+          background-image: url( $staticImgs + "/logo-footer-spritesx2.png");
+          background-size: 157px 96px;
+        }
+      }
+    }
+    .reagroup.rui-footer-rea-site-img {
+      width: 88px;
+      background-position: 0px -50px;
+    }
+    .reawebsite.rui-footer-rea-site-img {
+      width: 130px;
+      background-position: 0 -24px;
+    }
+    .reacommercial.rui-footer-rea-site-img {
+      width: 157px;
+      background-position: 0 1px;
+    }
+  }
+  #rui-footer-bottom-toggles {
+    display: none;
+  }
+  .rui-footer-navigation {
+    padding-top: 3em;
+  }
+  .rui-footer-site-links {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    .rui-footer-site-links-large-screen-header {
+      display: block;
+      margin-bottom: 7px;
+      color: #777;
+      font-family: $fontMedium;
+    }
+  }
+  .rui-footer-stock-info {
+    padding: 5px 0px 12px 0px;
+    color: #666666;
+  }
+  .rui-toggle-container {
+    display: block;
+  }
+}
+
+.ie8 .rui-footer #rui-footer-international-sites-content, .ie8 #rui-footer-partner-sites-content,
+.ie8 .rui-footer #rui-footer-international-sites-content, .ie8 #rui-footer-partner-sites-content {
+  //Todo: remove that and replace with styling to the open-toggled div once toggle is updated to apply a class rather than hiding divs through 'inline style'
+  display: block !important;
+}
+
+.ie8 .rui-footer {
+  min-width: $desktop;
+}
+
+@media only screen and (min-width: $desktop+1) {
+  .rui-footer {
+    .rui-footer-navigation ul:last-child li:last-child {
+      margin-right: 0px;
+      padding-right: 0px;
+    }
+    #rui-footer-international-sites-content, #rui-footer-partner-sites-content {
+      //Todo: remove that and replace with styling to the open-toggled div once toggle is updated to apply a class rather than hiding divs through 'inline style'
+      display: block !important;
+      margin-top: 15px;
+    }
+    .list-column-2 .pipe-separator:nth-child(4){
+      display: none;
+    }
+  }
+}
+@media only screen and (max-width: 770px) {
+  .rui-responsive .rui-footer-stock-info span{
+    line-height:25px;
+    display: block;
+  }
+}
+
+/*-- Media Selector                             --*/
+/*------------------------------------------------*/
+@include respond-to(wide-screens-and-smaller) {
+  .no-touch {
+    .rui-footer {
+      #rui-footer-bottom-toggles {
+        .rui-toggle-link {
+          &:hover {
+            background-color: #E5E5E5;
+          }
+        }
+      }
+    }
+  }
+  .rui-footer {
+    .rui-footer-column {
+      width: $desktop - ($gridPadding*2);
+      padding: 0 $gridPadding;
+    }
+  }
+  .rui-responsive {
+    .rui-footer {
+      width: auto;
+      //Displaying international / partner sites as divs shown via toggles
+      #rui-footer-bottom-toggles {
+        display: block;
+        margin-bottom: 0.5em;
+        .rui-toggle-link {
+          border: $footerMediumGray solid 1px;
+          background-color: #F8F8F8;
+          padding: 5px 8px;
+          margin: 0px 8px 5px 0px;
+          display: inline-block;
+          color: #666666;
+          font-weight: normal;
+          border-radius:2px;
+          .rui-icon-arrow-solid-down {
+            display: inherit;
+          }
+          .rui-icon-arrow-solid-up {
+            display: none;
+          }
+          &.rui-toggle-open {
+            .rui-icon-arrow-solid-down {
+              display: none;
+            }
+            .rui-icon-arrow-solid-up {
+              display: inherit;
+            }
+            background-color: #E5E5E5;
+          }
+          .rui-icon-arrow-solid-down, .rui-icon-arrow-solid-up {
+            font-size: 70%;
+            padding-left: 8px;
+          }
+        }
+      }
+      .rui-footer-row.rui-footer-rea-group {
+        text-align: center;
+
+        &.rui-footer-stock-info {
+          float: none;
+          padding-left: 2px;
+        }
+      }
+      .rui-footer-site-links {
+        padding-top: 17px;
+        .rui-footer-international-sites, .rui-footer-partner-sites {
+          .rui-footer-site-links-large-screen-header {
+            display: none;
+          }
+          .pipe-separator {
+            display: inline;
+          }
+        }
+        //Resets color from light to normal for links inside toggled-div
+        span {
+          font-weight: normal;
+        }
+      }
+      #rui-footer-partner-sites-content, #rui-footer-international-sites-content {
+        margin: 0 auto;
+        border: $footerMediumGray solid 1px;
+        background-color: white;
+        padding: 5px;
+        a {
+          padding: 5px 9px 5px 9px;
+        }
+        font-weight: lighter;
+        width: 95%;
+      }
+      //Other little adjustments
+      .rui-footer-column {
+        margin: 0px 12px;
+      }
+      .rui-footer-social, .rui-footer-navigation {
+        display: table;
+        margin: 0 auto;
+        float: none;
+        padding-bottom: 25px;
+      }
+      .rui-footer-navigation {
+        padding-top: 0px;
+      }
+      .rui-footer-column {
+        margin: auto;
+        width: auto;
+        padding: 0;
+      }
+      .rui-toggle-container {
+        display: none;
+      }
+    }
+  }
+}
+
+/*-- Media Selector                             --*/
+/*------------------------------------------------*/
+//Transition point to prevent logos from wrapping
+@media only screen and (max-width: 569px) {
+  .rui-responsive {
+    .rui-footer {
+      .rui-footer-rea-sites {
+        li {
+          margin-right: -4px;
+          .rui-footer-rea-site-img {
+            -ms-transform: scale(.91);
+            -webkit-transform: scale(.91);
+            transform: scale(.91);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-- Media Selector                             --*/
+/*------------------------------------------------*/
+//- Reduce space between links in toggle container so they don't break
+//- Break up site map links into two separate sublists and give the first sublist extra bottom margin
+@include respond-to(tablet-portrait-and-smaller) {
+  .rui-responsive {
+    .rui-footer {
+      #rui-footer-partner-sites-content, #rui-footer-international-sites-content {
+        a {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+      }
+      .rui-footer-navigation {
+        ul {
+          display: block;
+          &:first-child {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-- Media Selector                             --*/
+/*------------------------------------------------*/
+//Break partner sites into two separate lists, each displayed as a block
+@media only screen and (max-width: 565px) {
+  .rui-responsive {
+    .rui-footer {
+      #rui-footer-partner-sites-content {
+        .list {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/*-- Media Selector                             --*/
+/*------------------------------------------------*/
+@include respond-to(phone-landscape-and-smaller) {
+  .rui-responsive {
+    .rui-footer {
+      min-width: 320px;
+      margin: auto;
+      .rui-footer-rea-sites {
+        padding-top: 25px;
+        li {
+          margin-right: 0px;
+        }
+      }
+      .rui-footer-rea-group .rui-footer-column {
+        width: 270px;
+        margin: auto;
+      }
+      .rui-footer-site-links {
+        padding-top: 2px;
+        .rui-footer-partner-sites, .rui-footer-international-sites {
+          .pipe-separator {
+            display: none;
+          }
+        }
+      }
+      #rui-footer-bottom-toggles {
+        text-align: center;
+        .rui-toggle-link:last-child {
+          margin-right: 0px;
+        }
+      }
+      #rui-footer-international-sites-content, #rui-footer-partner-sites-content {
+        text-align: left;
+        overflow: auto;
+        width: 246px;
+        padding: 5px 0px 5px 0px;
+        margin-left: 11px;
+        .list-column-1 {
+          border-right: solid 1px $footerSeparatorGray;
+          padding-right: 20px;
+        }
+        .list {
+          margin-left: 10px;
+          vertical-align: top;
+          display: inline-block;
+          text-align: left;
+          a {
+            display: block;
+            margin: 10px 15px 15px 20px;
+          }
+          .list-column-2 {
+            margin-right: 0px;
+            padding-right: 0px;
+          }
+        }
+      }
+      //Show the partner sites as a single long list rather than two side-by-sides because of lack of space
+      #rui-footer-international-sites-content,#rui-footer-partner-sites-content {
+        .list-column-1 {
+          border: none;
+          margin-bottom: 0px;
+          padding-bottom: 0px;
+        }
+        .list-column-2 a:first-child {
+          margin-top: 0px;
+        }
+        .list {
+          margin-left: 10px;
+          text-align: left;
+          display: block;
+          padding-right: 0px;
+          padding-bottom: 0px;
+          a {
+            display: block;
+          }
+        }
+      }
+
+      .rui-footer-column {
+        overflow: hidden;
+        width: 298px;
+        margin: 0px auto;
+      }
+      .rui-footer-social {
+        display: table;
+        margin: 0 auto;
+        float: none;
+        padding-top: 25px;
+      }
+      .rui-footer-navigation {
+        padding-bottom: 25px;
+        float: none;
+        width: 250px;
+        margin-left: 38px;
+        ul {
+          display: inline-block;
+          float: right;
+          &:first-child {
+            float: left;
+            margin-bottom: 0px;
+          }
+          li {
+            padding-bottom: 32px;
+            position: relative;
+            padding-right: 5px;
+            display: block;
+            text-align: left;
+            &:last-child {
+              padding-bottom: 0px;
+            }
+          }
+        }
+      }
+      .rui-footer-rea-sites {
+        a {
+          display: block;
+        }
+        ul {
+          display: table;
+          margin: 0 auto;
+          width: 254px;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+        li {
+          .rui-footer-rea-site-img {
+            -ms-transform: scale(1);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            width: 100%;
+          }
+          display: block;
+          margin: 0px 0px 16px 0px;
+          padding: 0px 15px 8px 15px;
+          text-align: left;
+          border-bottom: 1px solid #EDEDED;
+          &:last-child {
+            border: none;
+          }
+        }
+        .rui-icon {
+          display: inline-block;
+          float: right;
+          margin-left: 15px;
+          margin-top: 5px;
+          &:before {
+            margin-right: 0px;
+          }
+        }
+      }
+      .rui-footer-site-links {
+        margin: auto;
+        width: 100%;
+      }
+      .rui-footer-stock-info {
+        clear: both;
+        float: none;
+        p {
+          line-height: 1.5;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+

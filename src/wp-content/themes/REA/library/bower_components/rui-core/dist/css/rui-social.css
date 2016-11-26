@@ -1,0 +1,149 @@
+/* RUI: REA User Interface library - Core - v6.5.0
+   Copyright 2016, REA Group */
+
+/**
+ * Global variables and mixins used across RUI SCSS
+ */
+/**
+ * Responsive Breakpoints
+ */
+.rui-social {
+  position: relative;
+  display: inline-block;
+  color: #697684;
+  color: rgba(105, 118, 132, 0.8); }
+  .rui-social > .rui-icon {
+    background: #fff;
+    color: #697684;
+    color: rgba(105, 118, 132, 0.8);
+    cursor: pointer;
+    height: 52px;
+    width: 54px;
+    font-size: 22px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    box-sizing: content-box;
+    transition: color 0.3s ease;
+    border-radius: 4px;
+    padding: 0; }
+    .rui-social > .rui-icon[data-show-counter=true] {
+      width: 64px; }
+    .rui-social > .rui-icon:hover {
+      color: #0084FF;
+      background: #edf0f2; }
+    .rui-social > .rui-icon:before, .rui-social > .rui-icon.icon-url span {
+      display: block;
+      line-height: 52px;
+      text-align: center;
+      width: 100%; }
+    .rui-social > .rui-icon.icon-url {
+      font-family: "Museo-Sans-300", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: #edf0f2;
+      padding: 0 1em; }
+      @media only screen and (max-width: 880px) {
+        .rui-responsive .rui-social > .rui-icon.icon-url {
+          padding: 0;
+          width: auto; }
+          .rui-responsive .rui-social > .rui-icon.icon-url:before {
+            content: "URL";
+            font-weight: bold; }
+          .rui-responsive .rui-social > .rui-icon.icon-url span {
+            display: none; } }
+      .rui-social > .rui-icon.icon-url:hover {
+        text-decoration: underline; }
+  .rui-social .rui-share-counter {
+    font-size: 10px;
+    line-height: 10px;
+    position: absolute;
+    text-align: right;
+    bottom: 13%;
+    right: 10%; }
+
+.rui-social-container {
+  display: block;
+  -webkit-transition: opacity .2s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden; }
+  .is-visible .rui-social-container {
+    left: 0;
+    opacity: 1;
+    height: auto;
+    transition-delay: 0s;
+    position: absolute;
+    z-index: 99;
+    background: #fff;
+    padding: 0 4px 4px 4px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0 0 4px 4px; }
+
+.rui-social-list {
+  position: relative;
+  float: left;
+  text-align: center;
+  padding: 4px;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 4px; }
+  .rui-social-list > .rui-social:only-of-type {
+    cursor: pointer; }
+  .rui-social-list .rui-social {
+    display: block; }
+    .rui-social-list .rui-social > .rui-icon {
+      margin: auto; }
+    .rui-social-list .rui-social:last-child {
+      margin-bottom: 0; }
+    .rui-social-list .rui-social.rui-social-title {
+      font-family: "Museo-Sans-500", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 52px; }
+
+.rui-social-list-inline {
+  display: inline-block; }
+  .rui-social-list-inline .rui-social {
+    float: left;
+    margin-right: 10px;
+    line-height: 40px; }
+    .rui-social-list-inline .rui-social .rui-icon:before {
+      line-height: 40px; }
+    .rui-social-list-inline .rui-social > .rui-icon {
+      width: 42px;
+      height: 40px;
+      font-size: 19px; }
+      .rui-social-list-inline .rui-social > .rui-icon.icon-url {
+        font-size: 14px;
+        margin-right: 24px;
+        max-width: 180px;
+        width: auto; }
+        .rui-social-list-inline .rui-social > .rui-icon.icon-url span {
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: 40px; }
+        @media only screen and (max-width: 880px) {
+          .rui-responsive .rui-social-list-inline .rui-social > .rui-icon.icon-url {
+            font-size: 13px;
+            margin-right: 10px;
+            width: 42px;
+            background: #fff; }
+            .rui-responsive .rui-social-list-inline .rui-social > .rui-icon.icon-url span {
+              display: none; } }
+      .rui-social-list-inline .rui-social > .rui-icon[data-show-counter=true] {
+        width: 52px; }
+    .rui-social-list-inline .rui-social:last-child {
+      margin-right: 0; }
+  .rui-social-list-inline .rui-social-title {
+    margin-right: 30px;
+    color: rgba(105, 118, 132, 0.8); }
+    .rui-social-list-inline .rui-social-title a {
+      color: rgba(105, 118, 132, 0.8); }
+    @media only screen and (max-width: 800px) {
+      .rui-responsive .rui-social-list-inline .rui-social-title {
+        font-size: 16px;
+        color: #333f48;
+        margin-bottom: 4px;
+        text-align: center;
+        display: block;
+        float: none;
+        margin-right: 0; } }
