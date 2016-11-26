@@ -5,12 +5,12 @@ chmod +x phpunit.phar && \
 mv phpunit.phar /usr/local/bin/phpunit
 
 ** Download Wordpress Test Framework from:
-http://develop.svn.wordpress.org/branches/-wordpress_version-/tests/phpunit/includes/
+http://develop.svn.wordpress.org/tags/-wordpress_version-/tests/phpunit/includes/
 
 *** Install Subversion
 
 Example:
-svn co http://develop.svn.wordpress.org/branches/4.5/tests/phpunit/includes/ ./wp-test
+svn co http://develop.svn.wordpress.org/tags/4.6.1/tests/phpunit/includes/ ./wp-test
 
 ** Files need to be modified when environment changes
 - bootstrap.php

@@ -7,17 +7,17 @@
     <testsuites>
         <!-- Default test suite to run all tests -->
         <testsuite>
-            <directory suffix=".php">./tests</directory>
-            <exclude>./tests/actions/closures.php</exclude>
-            <exclude>./tests/image/editor.php</exclude>
-            <exclude>./tests/image/editor_gd.php</exclude>
-            <exclude>./tests/image/editor_imagick.php</exclude>
-            <exclude>./tests/oembed/headers.php</exclude>
-            <file phpVersion="5.3.0">./tests/actions/closures.php</file>
-            <file phpVersion="5.3.0">./tests/image/editor.php</file>
-            <file phpVersion="5.3.0">./tests/image/editor_gd.php</file>
-            <file phpVersion="5.3.0">./tests/image/editor_imagick.php</file>
-            <file phpVersion="5.3.0">./tests/oembed/headers.php</file>
+            <directory suffix=".php">./tests-core</directory>
+            <exclude>./tests-core/actions/closures.php</exclude>
+            <exclude>./tests-core/image/editor.php</exclude>
+            <exclude>./tests-core/image/editor_gd.php</exclude>
+            <exclude>./tests-core/image/editor_imagick.php</exclude>
+            <exclude>./tests-core/oembed/headers.php</exclude>
+            <file phpVersion="5.3.0">./tests-core/actions/closures.php</file>
+            <file phpVersion="5.3.0">./tests-core/image/editor.php</file>
+            <file phpVersion="5.3.0">./tests-core/image/editor_gd.php</file>
+            <file phpVersion="5.3.0">./tests-core/image/editor_imagick.php</file>
+            <file phpVersion="5.3.0">./tests-core/oembed/headers.php</file>
         </testsuite>
     </testsuites>
     <groups>

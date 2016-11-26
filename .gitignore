@@ -1,3 +1,5 @@
 .DS_Store
 .svn
 test/build/
+test/data/.trac-ticket-cache.core.trac.wordpress.org
+Error:*/
