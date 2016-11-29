@@ -9,7 +9,9 @@ function _manually_load_environment() {
 
 	// Update array with plugins to include ...
 	$plugins_to_active = array(
-		'test-plugin/test-plugin.php'
+		'test-plugin/test-plugin.php',
+		'rest-api/plugin.php',
+		'REA-rest-api/plugin-rest-api.php'
 	);
 
 	update_option( 'active_plugins', $plugins_to_active );
