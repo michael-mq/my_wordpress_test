@@ -11,7 +11,8 @@ function _manually_load_environment() {
 	$plugins_to_active = array(
 		'test-plugin/test-plugin.php',
 		'rest-api/plugin.php',
-		'REA-rest-api/plugin-rest-api.php'
+		'REANews-rest-api/plugin.php',
+		'Basic-Auth-master/basic-auth.php'
 	);
 
 	update_option( 'active_plugins', $plugins_to_active );
