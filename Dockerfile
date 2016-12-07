@@ -1,4 +1,4 @@
-FROM wordpress:latest
+FROM wordpress:4.7
 
 RUN apt-get update && \
     apt-get install -y vim && \

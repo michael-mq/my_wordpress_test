@@ -1,1 +1,0 @@
-<h3 class="block-header"><?php echo get_sub_field('focus_heading'); ?></h3>

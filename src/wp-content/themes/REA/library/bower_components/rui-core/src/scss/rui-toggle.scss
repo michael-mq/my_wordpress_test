@@ -1,5 +1,0 @@
-//IOS doesn't bind click enents on elements that arent a, or input fields thus we need to force it for the toggles.
-//http://www.quirksmode.org/blog/archives/2010/09/click_event_del.html
-.rui-toggle-link {
-  cursor: pointer;
-}

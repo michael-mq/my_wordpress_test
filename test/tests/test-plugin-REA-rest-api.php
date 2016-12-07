@@ -133,9 +133,9 @@ class Test_Plugin_REA_REST_API extends WP_UnitTestCase {
 		$attachment = get_post( $data['id'] );
 		$this->assertEquals( 'My title is very cool', $data['title']['raw'] );
 		$this->assertEquals( 'My title is very cool', $attachment->post_title );
-		$this->assertEquals( 'This is a better caption.', $data['caption'] );
+		$this->assertEquals( 'This is a better caption.', $data['caption']['raw'] );
 		$this->assertEquals( 'This is a better caption.', $attachment->post_excerpt );
-		$this->assertEquals( 'Without a description, my attachment is descriptionless.', $data['description'] );
+		$this->assertEquals( 'Without a description, my attachment is descriptionless.', $data['description']['raw'] );
 		$this->assertEquals( 'Without a description, my attachment is descriptionless.', $attachment->post_content );
 		$this->assertEquals( 'Alt text is stored outside post schema.', $data['alt_text'] );
 		$this->assertEquals( 'Alt text is stored outside post schema.', get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ) );
@@ -150,9 +150,9 @@ class Test_Plugin_REA_REST_API extends WP_UnitTestCase {
 		$attachment = get_post( $data['id'] );
 		$this->assertEquals( 'My title is very cool', $data['title']['raw'] );
 		$this->assertEquals( 'My title is very cool', $attachment->post_title );
-		$this->assertEquals( 'This is a better caption.', $data['caption'] );
+		$this->assertEquals( 'This is a better caption.', $data['caption']['raw'] );
 		$this->assertEquals( 'This is a better caption.', $attachment->post_excerpt );
-		$this->assertEquals( 'Without a description, my attachment is descriptionless.', $data['description'] );
+		$this->assertEquals( 'Without a description, my attachment is descriptionless.', $data['description']['raw'] );
 		$this->assertEquals( 'Without a description, my attachment is descriptionless.', $attachment->post_content );
 		$this->assertEquals( 'Alt text is stored outside post schema.', $data['alt_text'] );
 		$this->assertEquals( 'Alt text is stored outside post schema.', get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ) );
@@ -196,6 +196,12 @@ class Test_Plugin_REA_REST_API extends WP_UnitTestCase {
 
 		$this->assertInstanceOf( 'WP_REST_Response', $response );
 		$this->assertEquals( 200, $response->get_status() );
+
+		$request = new WP_REST_Request( 'GET', '/news_integration/v1/users/Michael' );
+		$response = $this->server->dispatch( $request );
+
+		$this->assertInstanceOf( 'WP_REST_Response', $response );
+		$this->assertEquals( 404, $response->get_status() );
 
 	}
 
