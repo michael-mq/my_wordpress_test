@@ -10,7 +10,7 @@ http://develop.svn.wordpress.org/tags/-wordpress_version-/tests/phpunit/includes
 *** Install Subversion
 
 Example:
-svn co http://develop.svn.wordpress.org/tags/4.6.1/tests/phpunit/includes/ ./wp-test
+svn co http://develop.svn.wordpress.org/tags/4.7/tests/phpunit/includes/ ./test
 
 ** Files need to be modified when environment changes
 - bootstrap.php

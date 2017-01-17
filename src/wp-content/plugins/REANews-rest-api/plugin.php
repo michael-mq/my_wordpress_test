@@ -18,16 +18,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'REA_REST_API' ) ) {
 
-  add_action('rest_api_init', array('REA_REST_API','create_news_integration_api'));
-  add_action('add_meta_boxes', array('REA_REST_API','integration_add_meta_boxes'),10,2);
-
+	add_action('rest_api_init', array('REA_REST_API','create_news_integration_api'));
+	add_action('add_meta_boxes', array('REA_REST_API','integration_add_meta_boxes'),10,2);
 
   class REA_REST_API{
 
-    public static function init(){
-      add_action('rest_api_init', array(__CLASS__,'create_news_integration_api'));
-      add_action( 'add_meta_boxes', array(__CLASS__,'integration_add_meta_boxes'), 10, 2 );
-    }
+    // public static function init(){
+    //   add_action('rest_api_init', array(__CLASS__,'create_news_integration_api'));
+    //   add_action( 'add_meta_boxes', array(__CLASS__,'integration_add_meta_boxes'), 10, 2 );
+    // }
 
     public static function create_news_integration_api()
     {
@@ -45,6 +44,19 @@ if ( ! class_exists( 'REA_REST_API' ) ) {
       $controller = new WP_REST_REANews_Users_Controller();
       $controller->register_routes();
 
+			global $wpdb;
+
+      $wpdb->query(
+        '
+          CREATE TABLE IF NOT EXISTS content_integration_lookup (
+          source_id VARCHAR(256) NOT NULL,
+          source_name VARCHAR(256) NOT NULL,
+          post_id BIGINT(20),
+          PRIMARY KEY (source_id, source_name),
+          UNIQUE KEY post_id (post_id)
+          );
+        '
+			);
     }
 
     public static function integration_add_meta_boxes($post_type, $post)
