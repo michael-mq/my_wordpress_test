@@ -9,8 +9,6 @@ function _manually_load_environment() {
 
 	// Update array with plugins to include ...
 	$plugins_to_active = array(
-		'test-plugin/test-plugin.php',
-		'rest-api/plugin.php',
 		'REANews-rest-api/plugin.php',
 		'Basic-Auth-master/basic-auth.php'
 	);
