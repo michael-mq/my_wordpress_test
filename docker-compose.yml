@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 services:
    db:
@@ -18,7 +18,7 @@ services:
      depends_on:
        - db
      build: .
-     image: wordpress:latest
+     #image: wordpress:latest
      ports:
        - "8000:80"
      volumes:
