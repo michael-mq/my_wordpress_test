@@ -18,11 +18,10 @@ services:
      depends_on:
        - db
      build: .
-     #image: wordpress:latest
      ports:
        - "8000:80"
      volumes:
-      - ./src/:/var/www/html/
+      - ./src:/var/www/html
      restart: always
      environment:
        WORDPRESS_DB_HOST: db:3306
