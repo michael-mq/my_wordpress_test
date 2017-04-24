@@ -14,7 +14,7 @@ class PluginTest extends WP_UnitTestCase {
 
 		$post_id = $this->factory->post->create( array( 'post_title' => 'Test Post' , 'post_content'  => 'This is a test post.') );
 
-		WP_UnitTestCase::go_to(get_permalink($post_id));
+		parent::go_to(get_permalink($post_id));
 
 		$this->assertEquals(1, awepop_add_view() );
 	}
@@ -73,9 +73,8 @@ class PluginTest extends WP_UnitTestCase {
 		$this->expectOutputString('<ul>'.$str.'</ul>');
 		awepop_popularity_list(3);
 
-		
+
 
 	}
 
 }
-
