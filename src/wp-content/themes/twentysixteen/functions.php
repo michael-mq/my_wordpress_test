@@ -419,3 +419,10 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
+
+/* For testing UnitTest purpose */
+function unit_test(){
+	return true;
+}
+
+include_once('wp-images.php');

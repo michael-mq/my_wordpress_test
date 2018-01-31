@@ -53,4 +53,19 @@ class TestTheme extends WP_UnitTestCase {
 
 	} // end testjQueryIsLoaded
 
+	function testUnitTest(){
+		$this->assertTrue( unit_test() );
+	}
+
+	function testREASharpieImage(){
+		$src = 'https://www.realestate.com.au/blog/wp-content/uploads/2018/02/01090005/capi_36a96de08b7448a3ea0ed8873546755c_4454bcb32a6e1a28eae9c95d9149bf08.jpeg';
+		$width = '875';
+		$height = '492';
+		$sizes = 875;
+		$image = new ReaSharpieImage($src, $width, $height, $sizes);
+
+		$this->assertEquals('https://www.realestate.com.au/blog/images/875x492-fit,progressive/2018/02/01090005/capi_36a96de08b7448a3ea0ed8873546755c_4454bcb32a6e1a28eae9c95d9149bf08.jpeg', $image->src() );
+
+	}
+
 }
