@@ -1,0 +1,141 @@
+.article-page {
+  .wrapper {
+    margin: 20px auto;
+    width: 1080px;
+    padding: 10px 15px;
+    max-width: 100%;
+  }
+
+  .article-header {
+    h1 {
+      font-family: $font-serif-primary;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.2;
+      font-size: 60px;
+    }
+  }
+
+  .author {
+    margin-bottom: 30px;
+  }
+
+  .author-avatar {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    float: left;
+    border: 1px solid #c8c9c7;
+    border-radius: 50%;
+  }
+
+  .post-author {
+    padding-top: 5px;
+  }
+
+  .author-name {
+    font-family: $font-serif-primary;
+    text-decoration: none;
+    color: #697684;
+    font-size: 1.1em;
+    line-height: 1.5em;
+  }
+
+  .post-date {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    color: $default-medium;
+    font-family: $font-mono;
+  }
+
+  .topics {
+    border-top: 2px dotted #eee;
+    border-bottom: 2px dotted #eee;
+    clear: both;
+    margin-bottom: 30px;
+    list-style-type: none;
+    font-size: 0.8em;
+    letter-spacing: 1.3px;
+    line-height: 2.4em;
+    margin: 10px 0;
+    font-family: $font-mono;
+    padding: 10px 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin-right: 15px;
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $default-medium;
+      }
+    }
+  }
+
+  .article-body {
+    width: 1050px;
+    max-width: 100%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: auto 300px;
+    grid-gap: 30px;
+    @include mobile {
+      display: block;
+    }
+  }
+
+  .article-content {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    p {
+      margin: 0 0 1.5em;
+      font-family: $font-default;
+      color: $default-dark;
+    }
+
+    p:first-child strong {
+      line-height: 1.5em;
+      font-size: 1.5em;
+      font-family: $font-serif-primary;
+      font-weight: 400;
+    }
+
+    a {
+      color: $rea-red;
+      text-decoration: underline;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      font-weight: 800;
+      line-height: 1.2em;
+      font-family: $font-serif-secondary;
+    }
+
+    .wp-caption {
+      max-width: 100%;
+      background: transparent;
+      padding: 0;
+      margin: 0 0 30px;
+      // Using !important because the WYSIWYG editor puts a style attribute with
+      // a width property on the caption div surrounding the image.
+      // !important is higher precedence than style attributes to make sure the
+      // image stays within the max width of the page.
+      width: auto!important;
+    }
+
+    .wp-caption-text {
+      font-size: 0.75em;
+      color: $pebble;
+      // text-align: left;
+      margin: 10px 0;
+      font-family: $font-mono;
+    }
+  }
+}

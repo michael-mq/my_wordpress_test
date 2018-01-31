@@ -1,0 +1,19 @@
+.breadcrumbs{
+  padding: 0;
+  font-family: $font-mono;
+  text-align: left;
+  font-size: 12px;
+  list-style-type: none;
+
+  .category-link {
+    letter-spacing: 1px;
+    color: $pebble;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+}
